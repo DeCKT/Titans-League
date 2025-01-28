@@ -1,13 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Season # | T90 Titans League</title>
+    <link href="../styles/tw-main.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Season #</h1>
+    <section>
+      <h1 id="page_header">Season #</h1>
+      <menu id="league_selector">
+        <li><a href="#platinum">Platinum</a></li>
+        <li><a href="#gold">Gold</a></li>
+        <li><a href="#silver">Silver</a></li>
+      </menu>
+    </section>
 
-    <script src="./scripts/seasons.js"></script>
+    <section class="h-screen">
+      <h2 id="platinum">Platinum</h2>
+    </section>
+
+    <section class="h-screen">
+      <h2 id="gold">Gold</h2>
+    </section>
+
+    <section class="h-screen">
+      <h2 id="silver">Silver</h2>
+    </section>
+
+    <script type="module" src="../scripts/seasons.js"></script>
   </body>
 </html>

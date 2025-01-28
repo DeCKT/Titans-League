@@ -1,0 +1,39 @@
+[
+  {
+    "id": "TTL_S1_P",
+    "season_id": "TTL_S1",
+    "name": "Platinum League",
+    "start_date": "2022-06-27",
+    "end_date": "2022-08-07",
+    "groups": ["Group A", "Group B", "Group C", "Group D"],
+    "prizepool": 17300
+  },
+  {
+    "id": "TTL_S1_G",
+    "season_id": "TTL_S1",
+    "name": "Gold League",
+    "start_date": "2022-06-27",
+    "end_date": "2022-08-13",
+    "groups": ["Group A", "Group B", "Group C", "Group D"],
+    "prizepool": 5200
+  },
+  {
+    "id": "TTL_S1_S",
+    "season_id": "TTL_S1",
+    "name": "Silver League",
+    "start_date": "2022-12-01",
+    "end_date": "2023-01-01",
+    "groups": [
+      "Group A",
+      "Group B",
+      "Group C",
+      "Group D",
+      "Group E",
+      "Group F",
+      "Group G",
+      "Group H",
+      "Group I"
+    ],
+    "prizepool": null
+  }
+]

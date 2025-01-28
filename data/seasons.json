@@ -1,0 +1,35 @@
+[
+  {
+    "id": "TTL_S1",
+    "name": "Season 1",
+    "leagues": ["platinum", "gold", "silver"],
+    "maps": [
+      "Arabia",
+      "Arena",
+      "Atacama",
+      "Cross",
+      "Fortified Clearing",
+      "Gold Rush",
+      "Golden Swamp",
+      "Houseboat",
+      "Jungle Swamp",
+      "Ravines",
+      "Serengeti"
+    ]
+  },
+  {
+    "id": "TTL_S2",
+    "name": "Season 2",
+    "leagues": ["platinum", "gold", "silver"]
+  },
+  {
+    "id": "TTL_S3",
+    "name": "Season 3",
+    "leagues": ["platinum", "gold"]
+  },
+  {
+    "id": "TTL_S4",
+    "name": "Season 4",
+    "leagues": ["platinum", "gold", "silver"]
+  }
+]
