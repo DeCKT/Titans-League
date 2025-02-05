@@ -14,5 +14,157 @@
     "dob": "1991-12-11",
     "team": null,
     "links": []
+  },
+  {
+    "ign": "DauT",
+    "name": "Darko Dautovic",
+    "country": "RS",
+    "dob": "1985-07-30",
+    "team": "GamerLegion",
+    "links": []
+  },
+  {
+    "ign": "miguel",
+    "name": "Miguel Dornelles",
+    "country": "BR",
+    "dob": "1992-11-26",
+    "team": "FellowSheep Gaming",
+    "links": []
+  },
+  {
+    "ign": "classicpro",
+    "name": "Viktor Vitoshko",
+    "country": "UA",
+    "dob": "1995-08-04",
+    "team": "SalzZ",
+    "links": []
+  },
+  {
+    "ign": "saymyname",
+    "name": "Dang Thanh Nhan",
+    "country": "VN",
+    "dob": "1989-09-29",
+    "team": "Vietnam Legends",
+    "links": []
+  },
+  {
+    "ign": "Hera",
+    "name": "Hamzah El-Baher",
+    "country": "CA",
+    "dob": "1999-10-14",
+    "team": "GamerLegion",
+    "links": []
+  },
+  {
+    "ign": "Villese",
+    "name": "Ville Jämsä",
+    "country": "FI",
+    "dob": "1994-11-30",
+    "team": "Suomi",
+    "links": []
+  },
+  {
+    "ign": "Yo",
+    "name": "Gan Yangfan",
+    "country": "CN",
+    "dob": "1992-10-15",
+    "team": "LingYuan",
+    "links": []
+  },
+  {
+    "ign": "Barles",
+    "name": "Richard",
+    "country": "PL",
+    "dob": null,
+    "team": "The Amigos",
+    "links": []
+  },
+  {
+    "ign": "bruh",
+    "name": "Bruno",
+    "country": "BR",
+    "dob": "1991-01-21",
+    "team": "QuEnDi",
+    "links": []
+  },
+  {
+    "ign": "The_Dragonstar",
+    "name": "Ashwin Kumar",
+    "country": "IN",
+    "dob": "1999-10-22",
+    "team": "BLACKSAILS",
+    "links": []
+  },
+  {
+    "ign": "Vinchester",
+    "name": "Dmitriy Smirnov",
+    "country": "RU",
+    "dob": "1998-06-03",
+    "team": "SalzZ",
+    "links": []
+  },
+  {
+    "ign": "Liereyy",
+    "name": "Kai Kallinger",
+    "country": "AT",
+    "dob": "2002",
+    "team": "Onimaru Esports",
+    "links": []
+  },
+  {
+    "ign": "Capoch",
+    "name": "Patricio del Olmo",
+    "country": "AR",
+    "dob": "1987-04-13",
+    "team": "Wonders",
+    "links": []
+  },
+  {
+    "ign": "BacT",
+    "name": "Biên Ha",
+    "country": "VN",
+    "dob": "1990-08-01",
+    "team": "Vietnam Legends",
+    "links": []
+  },
+  {
+    "ign": "slam",
+    "name": "Christopher Gregson",
+    "country": "CA",
+    "dob": "1988-11-21",
+    "team": "mYinsanity",
+    "links": []
+  },
+  {
+    "ign": "SongSong",
+    "name": "Long",
+    "country": "VN",
+    "dob": "1993-06-01",
+    "team": "Vietnam Legends",
+    "links": []
+  },
+  {
+    "ign": "MbL",
+    "name": "Morten Beite Levernes",
+    "country": "NO",
+    "dob": "1994-07-19",
+    "team": "Taiwan Aoe Gamer",
+    "links": []
+  },
+  {
+    "ign": "Nicov",
+    "name": "Nicolás Bruno",
+    "country": "AR",
+    "dob": "1992-02-21",
+    "team": "Wonders",
+    "links": []
+  },
+  {
+    "ign": "TaToH",
+    "name": "Roberto Jiménez",
+    "country": "ES",
+    "dob": "1989-12-14",
+    "team": "GamerLegion",
+    "links": []
   }
 ]
