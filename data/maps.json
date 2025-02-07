@@ -33,5 +33,25 @@
     "name": "Golden Swamp",
     "types": ["land", "open", "water"],
     "img": ""
+  },
+  {
+    "name": "Houseboat",
+    "types": ["land", "water", "open"],
+    "img": ""
+  },
+  {
+    "name": "Jungle Swamp",
+    "types": ["land", "water", "open"],
+    "img": ""
+  },
+  {
+    "name": "Ravines",
+    "types": ["land", "open"],
+    "img": ""
+  },
+  {
+    "name": "Serengeti",
+    "types": ["land", "open"],
+    "img": ""
   }
 ]
