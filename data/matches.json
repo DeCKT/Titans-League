@@ -1,0 +1,24 @@
+[
+  {
+    "player_1": {
+      "name": "TheViper",
+      "civs": ["Mayans", "Mongols", "Sicilians", "Ethiopians", "Gurjaras"],
+      "score": 3
+    },
+    "player_2": {
+      "name": "saymyname",
+      "civs": ["Khmer", "Franks", "Hindustanis", "Berbers", "Britons"],
+      "score": 0
+    },
+    "maps": ["Arabia", "Gold Rush", "Ravines"],
+    "map_draft": "https://aoe2cm.net/draft/MmZxm",
+    "civ_draft": "https://aoe2cm.net/draft/QnpUE",
+    "season": "1",
+    "league": "platinum",
+    "round": "1",
+    "type": "all",
+    "max_rounds": "3",
+    "group": "A",
+    "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw"
+  }
+]

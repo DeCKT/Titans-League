@@ -1,0 +1,56 @@
+[
+  {
+    "player_1": {
+      "name": "TheViper",
+      "civ": "Mongols",
+      "winner": true
+    },
+    "player_2": {
+      "name": "saymyname",
+      "civ": "Berbers",
+      "winner": false
+    },
+    "map": "Ravines",
+    "season": "1",
+    "league": "platinum",
+    "group": "A",
+    "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw",
+    "length": 2914
+  },
+  {
+    "player_1": {
+      "name": "TheViper",
+      "civ": "Ethiopians",
+      "winner": true
+    },
+    "player_2": {
+      "name": "saymyname",
+      "civ": "Britons",
+      "winner": false
+    },
+    "map": "Arabia",
+    "season": "1",
+    "league": "platinum",
+    "group": "A",
+    "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw&t=1873s",
+    "length": 3674
+  },
+  {
+    "player_1": {
+      "name": "TheViper",
+      "civ": "Mayans",
+      "winner": true
+    },
+    "player_2": {
+      "name": "saymyname",
+      "civ": "Hindustanis",
+      "winner": false
+    },
+    "map": "Gold Rush",
+    "season": "1",
+    "league": "platinum",
+    "group": "A",
+    "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw&t=4286s",
+    "length": 2718
+  }
+]

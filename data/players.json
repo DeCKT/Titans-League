@@ -166,5 +166,29 @@
     "dob": "1989-12-14",
     "team": "GamerLegion",
     "links": []
+  },
+  {
+    "ign": "ACCM",
+    "name": "Huy Hoang",
+    "country": "VN",
+    "dob": "1989-09-28",
+    "team": "mYinsanity",
+    "links": []
+  },
+  {
+    "ign": "dogao",
+    "name": "Guilherme Pippi",
+    "country": "BR",
+    "dob": "1991-12-20",
+    "team": "FellowSheep Gaming",
+    "links": []
+  },
+  {
+    "ign": "BadBoy",
+    "name": "Bui Anh Tu",
+    "country": "VN",
+    "dob": "1991-07-19",
+    "team": "Vietnam Legends",
+    "links": []
   }
 ]

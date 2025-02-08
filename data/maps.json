@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Arabia",
+    "types": ["open", "land"],
+    "img": ""
+  },
+  {
+    "name": "Arena",
+    "types": ["land", "closed"],
+    "img": ""
+  },
+  {
+    "name": "Atacama",
+    "types": ["land", "water", "open"],
+    "img": ""
+  },
+  {
+    "name": "Cross",
+    "types": ["land", "water", "open"],
+    "img": ""
+  },
+  {
+    "name": "Fortified Clearing",
+    "types": ["land", "open", "closed"],
+    "img": ""
+  },
+  {
+    "name": "Gold Rush",
+    "types": ["land", "open"],
+    "img": ""
+  },
+  {
+    "name": "Golden Swamp",
+    "types": ["land", "open", "water"],
+    "img": ""
+  },
+  {
+    "name": "Houseboat",
+    "types": ["land", "water", "open"],
+    "img": ""
+  },
+  {
+    "name": "Jungle Swamp",
+    "types": ["land", "water", "open"],
+    "img": ""
+  },
+  {
+    "name": "Ravines",
+    "types": ["land", "open"],
+    "img": ""
+  },
+  {
+    "name": "Serengeti",
+    "types": ["land", "open"],
+    "img": ""
+  }
+]
