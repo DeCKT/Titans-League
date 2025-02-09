@@ -6,23 +6,24 @@
     <link href="./styles/tw-main.css" rel="stylesheet" />
     <title>T90 Titans League</title>
   </head>
-  <body class="bg-slate-900 text-sky-50">
+  <body class="bg-gray-950 text-sky-50">
     <nav>
-      <menu class="flex">
-        <li>
-          <a href="#" class="block px-4 py-3 ml-4">Home</a>
+      <menu class="flex bg-gray-900 z-10">
+        <li class="bg-gray-900 z-10">
+          <a href="/" class="block px-4 py-3 ml-4 hover:bg-slate-800">Home</a>
         </li>
-        <li class="relative group">
-          <button class="block px-4 py-3 flex gap-1 hover:cursor-pointer">
+        <li class="relative z-10 bg-gray-900" id="seasonSelector">
+          <button id="seasonSelectorButton" class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50">
             Seasons
             <span class="self-center"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                stroke-width="3"
                 stroke="currentColor"
-                class="size-3"
+                class="size-3 duration-200"
+                id="dropdownSvg"
               >
                 <path
                   stroke-linecap="round"
@@ -33,35 +34,36 @@
             </span>
           </button>
           <menu
-            class="absolute left-0 w-auto whitespace-nowrap opacity-0 group-hover:opacity-100"
+            class="absolute left-0 w-auto whitespace-nowrap bg-gray-900 -translate-y-full duration-200 -z-10"
+            id="dropdownMenu"
           >
             <li>
-              <a class="block px-4 py-3" href="/seasons/?season=1"
+              <a class="block px-4 py-3 hover:bg-slate-800" href="/seasons/?season=1"
                 >Season 1 - 2022</a
               >
             </li>
             <li>
-              <a class="block px-4 py-3" href="/seasons/?season=2"
+              <a class="block px-4 py-3 hover:bg-slate-800" href="/seasons/?season=2"
                 >Season 2 - 2023</a
               >
             </li>
             <li>
-              <a class="block px-4 py-3" href="/seasons/?season=3"
+              <a class="block px-4 py-3 hover:bg-slate-800" href="/seasons/?season=3"
                 >Season 3 - 2023</a
               >
             </li>
             <li>
-              <a class="block px-4 py-3" href="/seasons/?season=4"
+              <a class="block px-4 py-3 hover:bg-slate-800" href="/seasons/?season=4"
                 >Season 4 - 2025</a
               >
             </li>
           </menu>
         </li>
-        <li>
-          <a href="/players" class="block px-4 py-3">Players</a>
+        <li class="bg-gray-900 z-10">
+          <a href="/players/" class="block px-4 py-3 bg-gray-900 hover:bg-slate-800">Players</a>
         </li>
-        <li>
-          <a href="/maps" class="block px-4 py-3">Maps</a>
+        <li class="bg-gray-900 z-10">
+          <a href="/maps/" class="block px-4 py-3 bg-gray-900 hover:bg-slate-800">Maps</a>
         </li>
       </menu>
     </nav>
@@ -86,5 +88,6 @@
         </menu>
       </section>
     </main>
+    <script src="/scripts/navbar.js"></script>
   </body>
 </html>
