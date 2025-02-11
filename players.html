@@ -7,12 +7,12 @@
   <title>T90 Titans League</title>
 </head>
 <body class="bg-gray-950 text-sky-50">
-  <nav class="sticky top-0 w-full">
-    <menu class="flex bg-gray-900 z-10">
-      <li class="bg-gray-900 z-10">
+  <nav class="sticky top-0 w-full z-50">
+    <menu class="relative flex bg-gray-900 z-10">
+      <li class="bg-gray-900 z-40">
         <a href="/" class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800">Home</a>
       </li>
-      <li class="relative z-10 bg-gray-900" id="seasonSelector">
+      <li class="z-10 bg-gray-900" id="seasonSelector">
         <button id="seasonSelectorButton" class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50">
           Seasons
           <span class="self-center"
@@ -33,39 +33,19 @@
             </svg>
           </span>
         </button>
-        <menu
-          class="absolute left-0 w-auto whitespace-nowrap bg-gray-900 -translate-y-full duration-200 -z-10"
-          id="dropdownMenu"
-        >
-          <li>
-            <a class="block px-4 py-3 duration-100 hover:bg-slate-800" href="/seasons/?season=1"
-              >Season 1 - 2022</a
-            >
-          </li>
-          <li>
-            <a class="block px-4 py-3 duration-100 hover:bg-slate-800" href="/seasons/?season=2"
-              >Season 2 - 2023</a
-            >
-          </li>
-          <li>
-            <a class="block px-4 py-3 duration-100 hover:bg-slate-800" href="/seasons/?season=3"
-              >Season 3 - 2023</a
-            >
-          </li>
-          <li>
-            <a class="block px-4 py-3 duration-100 hover:bg-slate-800" href="/seasons/?season=4"
-              >Season 4 - 2025</a
-            >
-          </li>
-        </menu>
       </li>
       <li class="bg-gray-900 z-10">
-        <a href="/players/" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Players</a>
+        <a href="/players" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Players</a>
       </li>
       <li class="bg-gray-900 z-10">
-        <a href="/maps/" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Maps</a>
+        <a href="/maps" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Maps</a>
       </li>
     </menu>
+    <menu
+          class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
+          id="dropdownMenu"
+        >
+        </menu>
   </nav>
   <main class="p-4">
 
@@ -75,12 +55,12 @@
     </button></form>
     
 
-    <ul id="playersContainer" class="flex flex-wrap gap-3 justify-evenly md:justify-start">
+    <ul id="playersContainer" class="flex flex-wrap gap-3 justify-start">
 
     </ul>
 
   </main>
-  <script src="/scripts/navbar.js"></script>
+  <script src="/scripts/navbar.js" type="module"></script>
   <script src="/scripts/players.js" type="module"></script>
 </body>
 </html>

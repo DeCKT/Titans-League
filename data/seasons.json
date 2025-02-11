@@ -15,18 +15,24 @@
       "Ravines",
       "Serengeti"
     ],
-    "logo": ""
+    "logo": "s1-logo.png"
   },
   {
     "name": "Season 2",
-    "leagues": ["platinum", "gold", "silver"]
+    "leagues": ["platinum", "gold", "silver"],
+    "maps": [],
+    "logo": "s2-logo.png"
   },
   {
     "name": "Season 3",
-    "leagues": ["platinum", "gold"]
+    "leagues": ["platinum", "gold"],
+    "maps": [],
+    "logo": "s3-logo.png"
   },
   {
     "name": "Season 4",
-    "leagues": ["platinum", "gold", "silver"]
+    "leagues": ["platinum", "gold", "silver"],
+    "maps": [],
+    "logo": "s4-logo.png"
   }
 ]
