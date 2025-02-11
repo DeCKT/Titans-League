@@ -84,12 +84,12 @@ players.forEach((player) => {
     normalizedName === player.name ? "" : normalizedName
   }" style="background-image: url('${
     player.img ?? "../assets/playerunknown.png"
-  }')" class="bg-no-repeat bg-cover w-3xs aspect-3/4 overflow-hidden rounded-md hover:outline-2 hover:outline-sky-50 hover:scale-102 player-card">
+  }')" class=" flex-1 basis-[calc(50%-0.375rem)] sm:basis-[calc(33.33%-0.5rem)] bg-no-repeat bg-cover max-w-3xs aspect-3/4 duration-100 overflow-hidden rounded-md hover:outline-2 hover:outline-sky-50 hover:scale-102 player-card">
       <div class="bg-linear-to-t from-black/80 from-30% to-black/0 w-full h-full flex flex-col text-center p-2">
         <div class="flex w-full justify-center gap-2"><img src="https://flagsapi.com/${
           player.country
         }/flat/24.png" />${player.team ? `<div>${player.team}</div>` : ''}</div>
-        <div class="mt-auto font-black text-3xl">${player.ign}</div>
+        <div class="mt-auto font-black text-xl md:text-3xl">${player.ign}</div>
         <div class="font-light text-sm text-sky-50/75 pt-1">${player.name}</div>
         <div class="font-light text-xs text-sky-50/75 min-h-4">${player.dob ? `${age} years old` : ""}</div>
       </div>

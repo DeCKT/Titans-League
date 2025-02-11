@@ -31,3 +31,11 @@ seasonSelectorButton.addEventListener('click', () => {
     buttonMenuOpen = true;
   }
 })
+
+document.addEventListener('click', (e) => {
+  if (buttonMenuOpen && !seasonSelector.contains(e.target)) {
+    dropdownSvg.classList.remove('rotate-180');
+    dropdownMenu.classList.add('-translate-y-full');
+    buttonMenuOpen = false;
+  }
+});

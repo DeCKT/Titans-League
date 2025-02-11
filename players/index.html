@@ -7,7 +7,7 @@
   <title>T90 Titans League</title>
 </head>
 <body class="bg-gray-950 text-sky-50">
-  <nav>
+  <nav class="sticky top-0 w-full">
     <menu class="flex bg-gray-900 z-10">
       <li class="bg-gray-900 z-10">
         <a href="/" class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800">Home</a>
@@ -67,16 +67,15 @@
       </li>
     </menu>
   </nav>
-  <main>
-    <h1>Players</h1>
+  <main class="p-4">
 
-    <form><input id="searchInput" type="text" placeholder="Search..." /><button type="button" id="searchButton"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-4">
+    <form class="w-full flex mb-4 border border-sky-50 rounded-md scheme-dark"><input id="searchInput" type="text" placeholder="Search..." class="px-3 py-2 pr-0 basis-full"/><button type="button" id="searchButton" class="px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-4">
       <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
     </svg>
     </button></form>
     
 
-    <ul id="playersContainer" class="flex flex-wrap gap-3">
+    <ul id="playersContainer" class="flex flex-wrap gap-3 justify-evenly md:justify-start">
 
     </ul>
 
