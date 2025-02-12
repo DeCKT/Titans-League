@@ -736,6 +736,9 @@
   .scroll-smooth {
     scroll-behavior: smooth;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
@@ -854,6 +857,9 @@
   }
   .text-sky-50\/75 {
     color: color-mix(in oklab, var(--color-sky-50) 75%, transparent);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
