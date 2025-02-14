@@ -5,7 +5,8 @@
     "country": "NO",
     "dob": "1991-12-13",
     "team": "GamerLegion",
-    "links": []
+    "links": ["https://www.youtube.com/@TheViperAOE", "https://www.twitch.tv/theviper"],
+    "img": "/assets/players/theviper.jpg"
   },
   {
     "ign": "JorDan_AoE",
@@ -69,7 +70,8 @@
     "country": "CN",
     "dob": "1992-10-15",
     "team": "LingYuan",
-    "links": []
+    "links": [],
+    "img": "/assets/players/yo.jpg"
   },
   {
     "ign": "Barles",
@@ -157,7 +159,8 @@
     "country": "AR",
     "dob": "1992-02-21",
     "team": "Wonders",
-    "links": []
+    "links": [],
+    "img": "/assets/players/nicov.jpg"
   },
   {
     "ign": "TaToH",
