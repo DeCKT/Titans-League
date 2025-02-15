@@ -2,22 +2,22 @@
   {
     "name": "Arabia",
     "types": ["open", "land"],
-    "img": ""
+    "img": "rm_arabia.png"
   },
   {
     "name": "Arena",
     "types": ["land", "closed"],
-    "img": ""
+    "img": "rm_arena.png"
   },
   {
     "name": "Atacama",
     "types": ["land", "water", "open"],
-    "img": ""
+    "img": "rm_atacama.png"
   },
   {
     "name": "Cross",
     "types": ["land", "water", "open"],
-    "img": ""
+    "img": "rm_four-lakes.png"
   },
   {
     "name": "Fortified Clearing",
@@ -27,7 +27,7 @@
   {
     "name": "Gold Rush",
     "types": ["land", "open"],
-    "img": ""
+    "img": "rm_gold-rush.png"
   },
   {
     "name": "Golden Swamp",
@@ -47,11 +47,11 @@
   {
     "name": "Ravines",
     "types": ["land", "open"],
-    "img": ""
+    "img": "rm_ravines.png"
   },
   {
     "name": "Serengeti",
     "types": ["land", "open"],
-    "img": ""
+    "img": "rm_serengeti.png"
   }
 ]

@@ -47,8 +47,18 @@
           >
           </menu>
     </nav>
-    <h1>Maps</h1>
+    <main class="p-4">
+      <form class="w-full flex mb-4 border border-sky-50 rounded-md scheme-dark"><input id="searchInput" type="text" placeholder="Search..." class="px-3 py-2 pr-0 basis-full"/><button type="button" id="searchButton" class="px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg>
+      </button></form>
+
+      <ul id="mapsContainer" class="flex flex-wrap gap-3 justify-start">
+  
+      </ul></main>
+    
 
     <script src="/scripts/navbar.js" type="module"></script>
+    <script src="/scripts/maps.js" type="module"></script>
   </body>
 </html>
