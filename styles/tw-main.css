@@ -745,23 +745,9 @@
     --tw-gradient-from: var(--color-black);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-black\/70 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-black) 70%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .from-black\/80 {
     --tw-gradient-from: color-mix(in oklab, var(--color-black) 80%, transparent);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-black\/90 {
-    --tw-gradient-from: color-mix(in oklab, var(--color-black) 90%, transparent);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .from-10\% {
-    --tw-gradient-from-position: 10%;
-  }
-  .from-20\% {
-    --tw-gradient-from-position: 20%;
   }
   .from-30\% {
     --tw-gradient-from-position: 30%;
@@ -773,15 +759,6 @@
   .to-black\/0 {
     --tw-gradient-to: color-mix(in oklab, var(--color-black) 0%, transparent);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-40\% {
-    --tw-gradient-to-position: 40%;
-  }
-  .to-60\% {
-    --tw-gradient-to-position: 60%;
-  }
-  .to-70\% {
-    --tw-gradient-to-position: 70%;
   }
   .bg-cover {
     background-size: cover;
@@ -874,13 +851,6 @@
   .duration-200 {
     --tw-duration: 200ms;
     transition-duration: 200ms;
-  }
-  .group-hover\:opacity-100 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 100%;
-      }
-    }
   }
   .hover\:scale-102 {
     &:hover {
