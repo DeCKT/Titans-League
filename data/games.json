@@ -14,6 +14,7 @@
     "season": "1",
     "league": "platinum",
     "group": "A",
+    "round": "1",
     "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw",
     "length": 2914
   },
@@ -32,6 +33,7 @@
     "season": "1",
     "league": "platinum",
     "group": "A",
+    "round": "1",
     "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw&t=1873s",
     "length": 3674
   },
@@ -50,6 +52,7 @@
     "season": "1",
     "league": "platinum",
     "group": "A",
+    "round": "1",
     "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw&t=4286s",
     "length": 2718
   }

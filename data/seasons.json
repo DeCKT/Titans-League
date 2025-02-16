@@ -20,19 +20,19 @@
   {
     "name": "Season 2",
     "leagues": ["platinum", "gold", "silver"],
-    "maps": [],
+    "maps": ["Acropolis", "Arabia", "Arena", "Cross", "Fortified Clearing", "Fortress",	"Ghost Lake", "Kilimanjaro", "Nomad", "Scandinavia", "Shoals"],
     "logo": "s2-logo.png"
   },
   {
     "name": "Season 3",
-    "leagues": ["platinum", "gold"],
-    "maps": [],
+    "leagues": ["platinum", "gold", "silver"],
+    "maps": ["Coast to Mountain",	"El Dorado", "Fractal", "Golden Pit", "Graveyards", "Hideout", "Land Madness", "Migration", "Socotra", "Spiral", "ZeWall"],
     "logo": "s3-logo.png"
   },
   {
     "name": "Season 4",
-    "leagues": ["platinum", "gold", "silver"],
-    "maps": [],
+    "leagues": ["platinum", "gold"],
+    "maps": ["Acropolis", "Cross", "Dzong", "Evacuation", "Fortified Clearing", "Jungle Swamp", "Kilimanjaro", "Pacific Islands", "Ravines", "Rocky Forest" ,"Shoals"],
     "logo": "s4-logo.png"
   }
 ]
