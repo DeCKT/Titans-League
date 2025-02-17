@@ -1,66 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../styles/tw-main.css" rel="stylesheet" />
-  <title>T90 Titans League</title>
-</head>
-<body class="bg-gray-950 text-sky-50">
-  <nav class="sticky top-0 w-full z-50">
-    <menu class="relative flex bg-gray-900 z-10">
-      <li class="bg-gray-900 z-40">
-        <a href="/" class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800">Home</a>
-      </li>
-      <li class="z-10 bg-gray-900" id="seasonSelector">
-        <button id="seasonSelectorButton" class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50">
-          Seasons
-          <span class="self-center"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="3"
-              stroke="currentColor"
-              class="size-3 duration-200"
-              id="dropdownSvg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m19.5 8.25-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/tw-main.css" rel="stylesheet" />
+    <title>TTL | Players</title>
+  </head>
+  <body class="bg-gray-950 text-sky-50">
+    <nav class="sticky top-0 w-full z-50">
+      <menu class="relative flex bg-gray-900 z-10">
+        <li class="bg-gray-900 z-40">
+          <a
+            href="/"
+            class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800"
+            >Home</a
+          >
+        </li>
+        <li class="z-10 bg-gray-900" id="seasonSelector">
+          <button
+            id="seasonSelectorButton"
+            class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
+          >
+            Seasons
+            <span class="self-center"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="3"
+                stroke="currentColor"
+                class="size-3 duration-200"
+                id="dropdownSvg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </span>
+          </button>
+        </li>
+        <li class="bg-gray-900 z-10">
+          <a
+            href="/players"
+            class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+            >Players</a
+          >
+        </li>
+        <li class="bg-gray-900 z-10">
+          <a
+            href="/maps"
+            class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+            >Maps</a
+          >
+        </li>
+      </menu>
+      <menu
+        class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
+        id="dropdownMenu"
+      >
+      </menu>
+    </nav>
+    <main class="p-4">
+      <form
+        class="w-full flex mb-4 border border-sky-50 rounded-md scheme-dark"
+      >
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search..."
+          class="px-3 py-2 pr-0 basis-full"
+        /><button type="button" id="searchButton" class="px-3 py-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor"
+            class="size-4"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
         </button>
-      </li>
-      <li class="bg-gray-900 z-10">
-        <a href="/players" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Players</a>
-      </li>
-      <li class="bg-gray-900 z-10">
-        <a href="/maps" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Maps</a>
-      </li>
-    </menu>
-    <menu
-          class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
-          id="dropdownMenu"
-        >
-        </menu>
-  </nav>
-  <main class="p-4">
+      </form>
 
-    <form class="w-full flex mb-4 border border-sky-50 rounded-md scheme-dark"><input id="searchInput" type="text" placeholder="Search..." class="px-3 py-2 pr-0 basis-full"/><button type="button" id="searchButton" class="px-3 py-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-4">
-      <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-    </svg>
-    </button></form>
-    
-
-    <ul id="playersContainer" class="flex flex-wrap gap-3 justify-start">
-
-    </ul>
-
-  </main>
-  <script src="/scripts/navbar.js" type="module"></script>
-  <script src="/scripts/players.js" type="module"></script>
-</body>
+      <ul id="playersContainer" class="flex flex-wrap gap-3 justify-start"></ul>
+    </main>
+    <script src="/scripts/navbar.js" type="module"></script>
+    <script src="/scripts/players.js" type="module"></script>
+  </body>
 </html>

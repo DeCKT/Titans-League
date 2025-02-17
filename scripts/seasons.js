@@ -1,23 +1,30 @@
-import games from '../data/games.json'
-import groups from '../data/groups.json'
-import leagues from '../data/leagues.json'
-import maps from '../data/maps.json'
-import matches from '../data/matches.json'
-import players from '../data/players.json'
-import seasons from '../data/seasons.json'
+import seasons from "../data/seasons.json";
+import maps from "../data/maps.json";
 
-const page_header = document.querySelector("#page_header");
-const league_selector = document.querySelector("#league_selector");
+const seasonNumber = document.querySelector("#seasonNumber");
+const mapContainer = document.querySelector("#mapContainer");
+const seasonLogo = document.querySelector("#seasonLogo");
 
+const queries = window.location.search;
+const params = new URLSearchParams(queries);
+const seasonNum = params.get("season");
 
-const params = new URLSearchParams(window.location.search);
+const season = seasons.find((season) => season.name === `Season ${seasonNum}`);
 
-const seasonParam = params.get("season");
+// set h1
+seasonNumber.textContent = `Season ${seasonNum}`;
 
+// set title
+document.title = `TTL | Season 1`;
 
-if (season) {
-  document.title = `Season ${season} | T90 Titans League`;
-  page_header.textContent = `Season ${season}`;
-}
+seasonLogo.src = `/assets/${season.logo}`;
 
-console.log(games)
+season.maps.forEach((map) => {
+  const mapJson = maps.find((obj) => obj.name === map);
+
+  mapContainer.innerHTML += `
+    <li><img src="/assets/maps/${
+      mapJson.img.length > 0 ? mapJson.img : "cm_generic.png"
+    }"></li>
+  `;
+});

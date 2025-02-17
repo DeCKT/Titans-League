@@ -10,10 +10,17 @@
     <nav class="sticky top-0 w-full">
       <menu class="relative flex bg-gray-900 z-10">
         <li class="bg-gray-900 z-40">
-          <a href="/" class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800">Home</a>
+          <a
+            href="/"
+            class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800"
+            >Home</a
+          >
         </li>
         <li class="z-10 bg-gray-900" id="seasonSelector">
-          <button id="seasonSelectorButton" class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50">
+          <button
+            id="seasonSelectorButton"
+            class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
+          >
             Seasons
             <span class="self-center"
               ><svg
@@ -35,63 +42,33 @@
           </button>
         </li>
         <li class="bg-gray-900 z-10">
-          <a href="/players" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Players</a>
+          <a
+            href="/players"
+            class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+            >Players</a
+          >
         </li>
         <li class="bg-gray-900 z-10">
-          <a href="/maps" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Maps</a>
+          <a
+            href="/maps"
+            class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+            >Maps</a
+          >
         </li>
       </menu>
       <menu
-            class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
-            id="dropdownMenu"
-          >
-          </menu>
-    </nav>
-    <section>
-      <h1 id="page_header">Season 1</h1>
-      <menu id="league_selector">
-        <li><a href="#platinum">Platinum</a></li>
-        <li><a href="#gold">Gold</a></li>
-        <li><a href="#silver">Silver</a></li>
+        class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
+        id="dropdownMenu"
+      >
       </menu>
-    </section>
+    </nav>
+    <main class="p-4">
+      <h1 id="seasonNumber"></h1>
 
-    <section>
-      <h2 id="platinum">Platinum</h2>
+      <img id="seasonLogo" src="" />
 
-      <section>
-        <h3>Competitors</h3>
-        <p>The top 24 performing pro players from recent tournaments</p>
-
-        <section>
-          <h4>Groups</h4>
-          <div class="">
-            <div class="">
-              <h5>Group A</h5>
-              <ul class="">
-                <li class="flex gap-1">
-                  <img src="https://flagsapi.com/NO/flat/24.png" />
-                  <span>TheViper</span>
-                </li>
-                <li class=""><span>JorDan_AoE</span></li>
-                <li class=""><span>DauT</span></li>
-                <li class=""><span>miguel</span></li>
-                <li class=""><span>classicpro</span></li>
-                <li class=""><span>saymyname</span></li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-
-    <section>
-      <h2 id="gold">Gold</h2>
-    </section>
-
-    <section>
-      <h2 id="silver">Silver</h2>
-    </section>
+      <ul id="mapContainer"></ul>
+    </main>
 
     <script src="/scripts/navbar.js" type="module"></script>
     <script type="module" src="../scripts/seasons.js"></script>
