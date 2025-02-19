@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Season 1 | T90 Titans League</title>
+    <title>T90 Titans League</title>
     <link href="../styles/tw-main.css" rel="stylesheet" />
   </head>
   <body class="bg-gray-950 text-sky-50">
@@ -63,11 +63,23 @@
       </menu>
     </nav>
     <main class="p-4">
-      <h1 id="seasonNumber"></h1>
+      <section class="flex">
+        <div class="w-1/4">
+          <img id="seasonLogo" src="" class=""/>
+          <h1 class="" id="seasonNumber"></h1>
+          <menu class="flex flex-row justify-between" id="leaguesSelectorContainer"></menu>
+        </div>
+        <div class="w-3/4">
+          
+          <ul class="grid grid-cols-5 gap-2 p-4" id="mapContainer"></ul>
+        </div>
+      </section>
 
-      <img id="seasonLogo" src="" />
+      <section id="leaguesContainer">
 
-      <ul id="mapContainer"></ul>
+
+      </section>
+      
     </main>
 
     <script src="/scripts/navbar.js" type="module"></script>
