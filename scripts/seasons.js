@@ -1,5 +1,7 @@
 import seasons from "../data/seasons.json";
 import maps from "../data/maps.json";
+import leagues from '../data/leagues.json'
+import groups from '../data/groups.json'
 
 const seasonNumber = document.querySelector("#seasonNumber");
 const mapContainer = document.querySelector("#mapContainer");
@@ -12,6 +14,9 @@ const params = new URLSearchParams(queries);
 const seasonNum = params.get("season");
 
 const season = seasons.find((season) => season.name === `Season ${seasonNum}`);
+const seasonLeagues = leagues.filter((league) => league.season === seasonNum);
+const seasonGroups = groups.filter((group) => group.season === seasonNum)
+
 
 // set h1
 seasonNumber.textContent = `Season ${seasonNum}`;
@@ -31,7 +36,7 @@ season.leagues.forEach((league) => {
   const section = document.createElement('li')
   const anchor = document.createElement('a')
 
-  section.classList = `w-3/10 rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : ''}`
+  section.classList = `w-full rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
 
   let background
 
@@ -62,13 +67,47 @@ season.leagues.forEach((league) => {
   // build league section
   const div = document.createElement('div')
   const header = document.createElement('h2')
+  const dates = document.createElement('div')
+  const prize = document.createElement('div')
+  const groups = document.createElement('section')
+
+  const selectedLeague = seasonLeagues.find((item) => item.league === league)
 
   header.textContent = capitalizedLeague
 
+  dates.textContent = `${new Date(selectedLeague.start_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})} - ${new Date(selectedLeague.end_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})}`
+
+  prize.textContent = `${new Intl.NumberFormat(undefined, {style: 'currency',
+    currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2, currencyDisplay: 'code'
+  }).format(selectedLeague.prizepool)}`
+
+  selectedLeague.groups.forEach((group) => {
+    const groupContainer = document.createElement('div')
+    const groupHeader = document.createElement('h3')
+    const groupList = document.createElement('ul')
+
+    const selectedGroup = seasonGroups.find((item) => item.group === group && item.league === league)
+
+    groupHeader.textContent = `Group ${group}`
+
+    selectedGroup?.players.forEach((player) => {
+      const playerItem = document.createElement('li')
+      playerItem.textContent = player
+
+      groupList.appendChild(playerItem)
+    })
+
+    groupContainer.append(groupHeader, groupList)
+    groups.appendChild(groupContainer)
+  })
+
   div.id = league
-  div.classList = 'h-screen'
+  div.classList = 'h-screen border-b-1'
 
   div.appendChild(header)
+  div.appendChild(dates)
+  selectedLeague.prizepool ? div.appendChild(prize) : null
+  div.appendChild(groups)
 
   leaguesContainer.appendChild(div)
 })

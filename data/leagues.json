@@ -4,7 +4,7 @@
     "league": "platinum",
     "start_date": "2022-06-27",
     "end_date": "2022-08-07",
-    "groups": ["Group A", "Group B", "Group C", "Group D"],
+    "groups": ["A", "B", "C", "D"],
     "prizepool": 17300
   },
   {
@@ -12,7 +12,7 @@
     "league": "gold",
     "start_date": "2022-06-27",
     "end_date": "2022-08-13",
-    "groups": ["Group A", "Group B", "Group C", "Group D"],
+    "groups": ["A", "B", "C", "D"],
     "prizepool": 5200
   },
   {
@@ -21,15 +21,15 @@
     "start_date": "2022-12-01",
     "end_date": "2023-01-01",
     "groups": [
-      "Group A",
-      "Group B",
-      "Group C",
-      "Group D",
-      "Group E",
-      "Group F",
-      "Group G",
-      "Group H",
-      "Group I"
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I"
     ],
     "prizepool": null
   }
