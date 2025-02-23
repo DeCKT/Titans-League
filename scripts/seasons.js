@@ -36,7 +36,7 @@ season.leagues.forEach((league) => {
   const section = document.createElement('li')
   const anchor = document.createElement('a')
 
-  section.classList = `w-full rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
+  section.classList = `rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
 
   let background
 
@@ -77,6 +77,7 @@ season.leagues.forEach((league) => {
 
   dates.textContent = `${new Date(selectedLeague.start_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})} - ${new Date(selectedLeague.end_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})}`
 
+  
   prize.textContent = `${new Intl.NumberFormat(undefined, {style: 'currency',
     currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2, currencyDisplay: 'code'
   }).format(selectedLeague.prizepool)}`
@@ -121,50 +122,50 @@ season.maps.forEach((map, index) => {
 
   let classes;
 
-  switch (index) {
-    // First row: 3 items
-    case 0:
-      classes = 'col-start-2 row-start-1';
-      break;
-    case 1:
-      classes = 'col-start-3 row-start-1';
-      break;
-    case 2:
-      classes = 'col-start-4 row-start-1';
-      break;
+  // switch (index) {
+  //   // First row: 3 items
+  //   case 0:
+  //     classes = 'col-start-2 row-start-1';
+  //     break;
+  //   case 1:
+  //     classes = 'col-start-3 row-start-1';
+  //     break;
+  //   case 2:
+  //     classes = 'col-start-4 row-start-1';
+  //     break;
 
-    // Middle row: 5 items
-    case 3:
-      classes = 'col-start-1 row-start-2';
-      break;
-    case 4:
-      classes = 'col-start-2 row-start-2';
-      break;
-    case 5:
-      classes = 'col-start-3 row-start-2';
-      break;
-    case 6:
-      classes = 'col-start-4 row-start-2';
-      break;
-    case 7:
-      classes = 'col-start-5 row-start-2';
-      break;
+  //   // Middle row: 5 items
+  //   case 3:
+  //     classes = 'col-start-1 row-start-2';
+  //     break;
+  //   case 4:
+  //     classes = 'col-start-2 row-start-2';
+  //     break;
+  //   case 5:
+  //     classes = 'col-start-3 row-start-2';
+  //     break;
+  //   case 6:
+  //     classes = 'col-start-4 row-start-2';
+  //     break;
+  //   case 7:
+  //     classes = 'col-start-5 row-start-2';
+  //     break;
 
-    // Last row: 3 items
-    case 8:
-      classes = 'col-start-2 row-start-3';
-      break;
-    case 9:
-      classes = 'col-start-3 row-start-3';
-      break;
-    case 10:
-      classes = 'col-start-4 row-start-3';
-      break;
+  //   // Last row: 3 items
+  //   case 8:
+  //     classes = 'col-start-2 row-start-3';
+  //     break;
+  //   case 9:
+  //     classes = 'col-start-3 row-start-3';
+  //     break;
+  //   case 10:
+  //     classes = 'col-start-4 row-start-3';
+  //     break;
 
-    default:
-      console.warn('Index out of range for 3-5-3 layout');
-      break;
-  }
+  //   default:
+  //     console.warn('Index out of range for 3-5-3 layout');
+  //     break;
+  // }
 
   container.classList = classes
 
