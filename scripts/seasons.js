@@ -6,6 +6,8 @@ import groups from '../data/groups.json'
 const seasonNumber = document.querySelector("#seasonNumber");
 const mapContainer = document.querySelector("#mapContainer");
 const seasonLogo = document.querySelector("#seasonLogo");
+const playlistLink = document.querySelector("#playlistLink")
+const playlistImg = document.querySelector("#playlistImg")
 const leaguesSelectorContainer = document.querySelector('#leaguesSelectorContainer')
 const leaguesContainer = document.querySelector('#leaguesContainer')
 
@@ -22,10 +24,16 @@ const seasonGroups = groups.filter((group) => group.season === seasonNum)
 seasonNumber.textContent = `Season ${seasonNum}`;
 
 // set title
-document.title = `TTL | Season 1`;
+document.title = `TTL | Season ${seasonNum}`;
 
 // set season logo
 seasonLogo.src = `/assets/${season.logo}`;
+
+// set playlist link
+playlistLink.href = `https://www.youtube.com/watch?v=${season.thumbnail}&list=${season.playlist}&index=1`
+
+// set playlist image
+playlistImg.src = `https://i.ytimg.com/vi/${season.thumbnail}/maxresdefault.jpg`
 
 // build leagues
 season.leagues.forEach((league) => {
@@ -36,7 +44,7 @@ season.leagues.forEach((league) => {
   const section = document.createElement('li')
   const anchor = document.createElement('a')
 
-  section.classList = `rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
+  section.classList = `w-25 rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
 
   let background
 

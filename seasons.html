@@ -62,13 +62,23 @@
       >
       </menu>
     </nav>
-    <main class="p-4">
-      <section class="">
-        <div class="">
-          <img id="seasonLogo" src="" class="w-50"/>
-          <h1 class="" id="seasonNumber"></h1>
-          <menu class="flex" id="leaguesSelectorContainer"></menu>
+    <main class="">
+      <section class="w-full h-full place-content-center">
+        <div class="max-w-7xl max-h-5xl p-4 m-auto flex my-20 bg-gray-700 rounded-md">
+          <div class="">
+            <img id="seasonLogo" src="" class="w-100"/>
+          </div>
+          <div class="flex flex-col w-full">
+            <h1 class="text-5xl" id="seasonNumber"></h1>
+            <a target="_blank" id="playlistLink">
+              <img id="playlistImg"/>
+            </a>
+            <menu class="flex flex-row gap-4" id="leaguesSelectorContainer"></menu>
+          </div>
         </div>
+      </section>
+
+      <section>
         <div class="">
           
           <ul class="grid grid-cols-5 gap-2 p-4" id="mapContainer"></ul>
