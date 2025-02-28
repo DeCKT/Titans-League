@@ -27,13 +27,13 @@ seasonNumber.textContent = `Season ${seasonNum}`;
 document.title = `TTL | Season ${seasonNum}`;
 
 // set season logo
-seasonLogo.src = `/assets/${season.logo}`;
+// seasonLogo.src = `/assets/${season.logo}`;
 
 // set playlist link
-playlistLink.href = `https://www.youtube.com/watch?v=${season.thumbnail}&list=${season.playlist}&index=1`
+// playlistLink.href = `https://www.youtube.com/watch?v=${season.thumbnail}&list=${season.playlist}&index=1`
 
 // set playlist image
-playlistImg.src = `https://i.ytimg.com/vi/${season.thumbnail}/maxresdefault.jpg`
+// playlistImg.src = `https://i.ytimg.com/vi/${season.thumbnail}/maxresdefault.jpg`
 
 // build leagues
 season.leagues.forEach((league) => {
