@@ -39,34 +39,32 @@ document.title = `TTL | Season ${seasonNum}`;
 season.leagues.forEach((league) => {
 
   const capitalizedLeague = league.charAt(0).toUpperCase() + league.slice(1)
-
-  // build league section selector
-  const section = document.createElement('li')
-  const anchor = document.createElement('a')
-
-  section.classList = `w-25 rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
-
-  let background
+  let leagueIcon
 
   switch (league) {
-    case 'platinum':
-      background = 'bg-linear-to-b from-gray-200 via-gray-50 via-70% to-gray-400'
+    case 'silver':
+      leagueIcon = '/assets/silver-icon.png'
       break;
     case 'gold':
-      background = 'bg-linear-to-b from-amber-300 via-yellow-200 via-70% to-amber-500'
+      leagueIcon = '/assets/gold-icon.png'
       break;
-    case 'silver':
-      background = 'bg-linear-to-b from-zinc-400 via-slate-300 via-70% to-zinc-500'
-  
+    case 'platinum':
+      leagueIcon = '/assets/platinum-icon.png'
+      break;
     default:
       break;
   }
 
+  // build league section selector
+  const section = document.createElement('li')
+  const anchor = document.createElement('a')
+  const icon = document.createElement('img')
 
+  icon.src = leagueIcon
   anchor.textContent = capitalizedLeague
   anchor.href = `#${league}`
-  anchor.classList = `p-1 block text-center text-gray-950 font-bold ${background}`
   
+  anchor.appendChild(icon)
   section.appendChild(anchor)
 
   leaguesSelectorContainer.appendChild(section)
@@ -130,50 +128,50 @@ season.maps.forEach((map, index) => {
 
   let classes;
 
-  // switch (index) {
-  //   // First row: 3 items
-  //   case 0:
-  //     classes = 'col-start-2 row-start-1';
-  //     break;
-  //   case 1:
-  //     classes = 'col-start-3 row-start-1';
-  //     break;
-  //   case 2:
-  //     classes = 'col-start-4 row-start-1';
-  //     break;
+  switch (index) {
+    // First row: 4 items
+    case 0:
+      classes = 'col-start-1 row-start-1 col-span-2 row-span-2'; // First item in the first row
+      break;
+    case 1:
+      classes = 'col-start-3 row-start-1 col-span-2 row-span-2'; // Second item in the first row
+      break;
+    case 2:
+      classes = 'col-start-5 row-start-1 col-span-2 row-span-2'; // Third item in the first row
+      break;
+    case 3:
+      classes = 'col-start-7 row-start-1 col-span-2 row-span-2'; // Fourth item in the first row
+      break;
 
-  //   // Middle row: 5 items
-  //   case 3:
-  //     classes = 'col-start-1 row-start-2';
-  //     break;
-  //   case 4:
-  //     classes = 'col-start-2 row-start-2';
-  //     break;
-  //   case 5:
-  //     classes = 'col-start-3 row-start-2';
-  //     break;
-  //   case 6:
-  //     classes = 'col-start-4 row-start-2';
-  //     break;
-  //   case 7:
-  //     classes = 'col-start-5 row-start-2';
-  //     break;
+    // Middle row: 3 items
+    case 4:
+      classes = 'col-start-2 row-start-2 col-span-2 row-span-2'; // First item in the middle row (centered)
+      break;
+    case 5:
+      classes = 'col-start-4 row-start-2 col-span-2 row-span-2'; // Second item in the middle row (centered)
+      break;
+    case 6:
+      classes = 'col-start-6 row-start-2 col-span-2 row-span-2'; // Third item in the middle row (centered)
+      break;
 
-  //   // Last row: 3 items
-  //   case 8:
-  //     classes = 'col-start-2 row-start-3';
-  //     break;
-  //   case 9:
-  //     classes = 'col-start-3 row-start-3';
-  //     break;
-  //   case 10:
-  //     classes = 'col-start-4 row-start-3';
-  //     break;
+    // Last row: 4 items
+    case 7:
+      classes = 'col-start-1 row-start-3 col-span-2 row-span-2'; // First item in the last row
+      break;
+    case 8:
+      classes = 'col-start-3 row-start-3 col-span-2 row-span-2'; // Second item in the last row
+      break;
+    case 9:
+      classes = 'col-start-5 row-start-3 col-span-2 row-span-2'; // Third item in the last row
+      break;
+    case 10:
+      classes = 'col-start-7 row-start-3 col-span-2 row-span-2'; // Fourth item in the last row
+      break;
 
-  //   default:
-  //     console.warn('Index out of range for 3-5-3 layout');
-  //     break;
-  // }
+    default:
+      console.warn('Index out of range for 4-3-4 layout');
+      break;
+  }
 
   container.classList = classes
 
