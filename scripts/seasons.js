@@ -131,47 +131,53 @@ season.maps.forEach((map, index) => {
   switch (index) {
     // First row: 4 items
     case 0:
-      classes = 'col-start-1 row-start-1 col-span-2 row-span-2'; // First item in the first row
+      classes = 'col-start-1 row-start-1'; // First item in the first row
       break;
     case 1:
-      classes = 'col-start-3 row-start-1 col-span-2 row-span-2'; // Second item in the first row
+      classes = 'col-start-3 row-start-1'; // Second item in the first row
       break;
     case 2:
-      classes = 'col-start-5 row-start-1 col-span-2 row-span-2'; // Third item in the first row
+      classes = 'col-start-5 row-start-1'; // Third item in the first row
       break;
     case 3:
-      classes = 'col-start-7 row-start-1 col-span-2 row-span-2'; // Fourth item in the first row
+      classes = 'col-start-7 row-start-1'; // Fourth item in the first row
       break;
 
     // Middle row: 3 items
     case 4:
-      classes = 'col-start-2 row-start-2 col-span-2 row-span-2'; // First item in the middle row (centered)
+      classes = 'col-start-2 row-start-2'; // First item in the middle row (centered)
       break;
     case 5:
-      classes = 'col-start-4 row-start-2 col-span-2 row-span-2'; // Second item in the middle row (centered)
+      classes = 'col-start-4 row-start-2'; // Second item in the middle row (centered)
       break;
     case 6:
-      classes = 'col-start-6 row-start-2 col-span-2 row-span-2'; // Third item in the middle row (centered)
+      classes = 'col-start-6 row-start-2'; // Third item in the middle row (centered)
       break;
 
     // Last row: 4 items
     case 7:
-      classes = 'col-start-1 row-start-3 col-span-2 row-span-2'; // First item in the last row
+      classes = 'col-start-1 row-start-3'; // First item in the last row
       break;
     case 8:
-      classes = 'col-start-3 row-start-3 col-span-2 row-span-2'; // Second item in the last row
+      classes = 'col-start-3 row-start-3'; // Second item in the last row
       break;
     case 9:
-      classes = 'col-start-5 row-start-3 col-span-2 row-span-2'; // Third item in the last row
+      classes = 'col-start-5 row-start-3'; // Third item in the last row
       break;
     case 10:
-      classes = 'col-start-7 row-start-3 col-span-2 row-span-2'; // Fourth item in the last row
+      classes = 'col-start-7 row-start-3'; // Fourth item in the last row
       break;
 
     default:
       console.warn('Index out of range for 4-3-4 layout');
       break;
   }
+
+  classes += ' col-span-2 row-span-2 cursor-pointer hover:scale-108 duration-100'
+
+  let style = "clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"
+
+  container.style = style
 
   container.classList = classes
 
