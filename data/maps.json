@@ -2,56 +2,56 @@
   {
     "name": "Arabia",
     "types": ["open", "land"],
-    "img": "rm_arabia.png"
+    "img": "ttl1_arabia.png"
   },
   {
     "name": "Arena",
     "types": ["land", "closed"],
-    "img": "rm_arena.png"
+    "img": "ttl1_arena.png"
   },
   {
     "name": "Atacama",
     "types": ["land", "water", "open"],
-    "img": "rm_atacama.png"
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Cross",
     "types": ["land", "water", "open"],
-    "img": "rm_four-lakes.png"
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Fortified Clearing",
     "types": ["land", "open", "closed"],
-    "img": ""
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Gold Rush",
     "types": ["land", "open"],
-    "img": "rm_gold-rush.png"
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Golden Swamp",
     "types": ["land", "open", "water"],
-    "img": ""
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Houseboat",
     "types": ["land", "water", "open"],
-    "img": ""
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Jungle Swamp",
     "types": ["land", "water", "open"],
-    "img": ""
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Ravines",
     "types": ["land", "open"],
-    "img": "rm_ravines.png"
+    "img": "ttl1_atacama.png"
   },
   {
     "name": "Serengeti",
     "types": ["land", "open"],
-    "img": "rm_serengeti.png"
+    "img": "ttl1_atacama.png"
   }
 ]

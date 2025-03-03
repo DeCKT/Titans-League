@@ -6,6 +6,8 @@ import groups from '../data/groups.json'
 const seasonNumber = document.querySelector("#seasonNumber");
 const mapContainer = document.querySelector("#mapContainer");
 const seasonLogo = document.querySelector("#seasonLogo");
+const playlistLink = document.querySelector("#playlistLink")
+const playlistImg = document.querySelector("#playlistImg")
 const leaguesSelectorContainer = document.querySelector('#leaguesSelectorContainer')
 const leaguesContainer = document.querySelector('#leaguesContainer')
 
@@ -22,43 +24,47 @@ const seasonGroups = groups.filter((group) => group.season === seasonNum)
 seasonNumber.textContent = `Season ${seasonNum}`;
 
 // set title
-document.title = `TTL | Season 1`;
+document.title = `TTL | Season ${seasonNum}`;
 
 // set season logo
-seasonLogo.src = `/assets/${season.logo}`;
+// seasonLogo.src = `/assets/${season.logo}`;
+
+// set playlist link
+// playlistLink.href = `https://www.youtube.com/watch?v=${season.thumbnail}&list=${season.playlist}&index=1`
+
+// set playlist image
+// playlistImg.src = `https://i.ytimg.com/vi/${season.thumbnail}/maxresdefault.jpg`
 
 // build leagues
 season.leagues.forEach((league) => {
 
   const capitalizedLeague = league.charAt(0).toUpperCase() + league.slice(1)
-
-  // build league section selector
-  const section = document.createElement('li')
-  const anchor = document.createElement('a')
-
-  section.classList = `w-full rounded-md overflow-hidden${league === 'platinum' ? ' shadow-[0px_0px_15px_1px_#DFF2FE]' : league === 'gold' ? ' shadow-[0px_0px_8px_0px_#ffdf20]' : league === "silver" ? ' shadow-[0px_0px_6px_0px_#99a1af]' : ''}`
-
-  let background
+  let leagueIcon
 
   switch (league) {
-    case 'platinum':
-      background = 'bg-linear-to-b from-gray-200 via-gray-50 via-70% to-gray-400'
+    case 'silver':
+      leagueIcon = '/assets/silver-icon.png'
       break;
     case 'gold':
-      background = 'bg-linear-to-b from-amber-300 via-yellow-200 via-70% to-amber-500'
+      leagueIcon = '/assets/gold-icon.png'
       break;
-    case 'silver':
-      background = 'bg-linear-to-b from-zinc-400 via-slate-300 via-70% to-zinc-500'
-  
+    case 'platinum':
+      leagueIcon = '/assets/platinum-icon.png'
+      break;
     default:
       break;
   }
 
+  // build league section selector
+  const section = document.createElement('li')
+  const anchor = document.createElement('a')
+  const icon = document.createElement('img')
 
+  icon.src = leagueIcon
   anchor.textContent = capitalizedLeague
   anchor.href = `#${league}`
-  anchor.classList = `p-1 block text-center text-gray-950 font-bold ${background}`
   
+  anchor.appendChild(icon)
   section.appendChild(anchor)
 
   leaguesSelectorContainer.appendChild(section)
@@ -77,6 +83,7 @@ season.leagues.forEach((league) => {
 
   dates.textContent = `${new Date(selectedLeague.start_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})} - ${new Date(selectedLeague.end_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})}`
 
+  
   prize.textContent = `${new Intl.NumberFormat(undefined, {style: 'currency',
     currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2, currencyDisplay: 'code'
   }).format(selectedLeague.prizepool)}`
@@ -122,49 +129,55 @@ season.maps.forEach((map, index) => {
   let classes;
 
   switch (index) {
-    // First row: 3 items
+    // First row: 4 items
     case 0:
-      classes = 'col-start-2 row-start-1';
+      classes = 'col-start-1 row-start-1'; // First item in the first row
       break;
     case 1:
-      classes = 'col-start-3 row-start-1';
+      classes = 'col-start-3 row-start-1'; // Second item in the first row
       break;
     case 2:
-      classes = 'col-start-4 row-start-1';
+      classes = 'col-start-5 row-start-1'; // Third item in the first row
+      break;
+    case 3:
+      classes = 'col-start-7 row-start-1'; // Fourth item in the first row
       break;
 
-    // Middle row: 5 items
-    case 3:
-      classes = 'col-start-1 row-start-2';
-      break;
+    // Middle row: 3 items
     case 4:
-      classes = 'col-start-2 row-start-2';
+      classes = 'col-start-2 row-start-2'; // First item in the middle row (centered)
       break;
     case 5:
-      classes = 'col-start-3 row-start-2';
+      classes = 'col-start-4 row-start-2'; // Second item in the middle row (centered)
       break;
     case 6:
-      classes = 'col-start-4 row-start-2';
-      break;
-    case 7:
-      classes = 'col-start-5 row-start-2';
+      classes = 'col-start-6 row-start-2'; // Third item in the middle row (centered)
       break;
 
-    // Last row: 3 items
+    // Last row: 4 items
+    case 7:
+      classes = 'col-start-1 row-start-3'; // First item in the last row
+      break;
     case 8:
-      classes = 'col-start-2 row-start-3';
+      classes = 'col-start-3 row-start-3'; // Second item in the last row
       break;
     case 9:
-      classes = 'col-start-3 row-start-3';
+      classes = 'col-start-5 row-start-3'; // Third item in the last row
       break;
     case 10:
-      classes = 'col-start-4 row-start-3';
+      classes = 'col-start-7 row-start-3'; // Fourth item in the last row
       break;
 
     default:
-      console.warn('Index out of range for 3-5-3 layout');
+      console.warn('Index out of range for 4-3-4 layout');
       break;
   }
+
+  classes += ' col-span-2 row-span-2 cursor-pointer hover:scale-108 duration-100'
+
+  let style = "clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"
+
+  container.style = style
 
   container.classList = classes
 
