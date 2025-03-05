@@ -125,6 +125,7 @@ season.maps.forEach((map, index) => {
 
   const container = document.createElement('li')
   const image = document.createElement('img')
+  const mapName = document.createElement('div')
 
   let classes;
 
@@ -173,7 +174,10 @@ season.maps.forEach((map, index) => {
       break;
   }
 
-  classes += ' col-span-2 row-span-2 cursor-pointer hover:scale-108 duration-100'
+  classes += ' col-span-2 row-span-2 cursor-pointer hover:scale-108 duration-100 relative'
+
+  mapName.classList = 'absolute w-full h-full top-0 left-0 z-10 text-center flex items-center justify-center'
+  mapName.textContent = mapJson.name
 
   let style = "clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"
 
@@ -181,10 +185,9 @@ season.maps.forEach((map, index) => {
 
   container.classList = classes
 
-
   image.src = `/assets/maps/${mapJson.img.length > 0 ? mapJson.img : "cm_generic.png"}`
 
-  container.appendChild(image)
+  container.append(image, mapName)
 
   mapContainer.appendChild(container)
 });

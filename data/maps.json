@@ -17,41 +17,41 @@
   {
     "name": "Cross",
     "types": ["land", "water", "open"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_cross.png"
   },
   {
     "name": "Fortified Clearing",
     "types": ["land", "open", "closed"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_fortified_clearing.png"
   },
   {
     "name": "Gold Rush",
     "types": ["land", "open"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_gold_rush.png"
   },
   {
     "name": "Golden Swamp",
     "types": ["land", "open", "water"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_golden_swamp.png"
   },
   {
     "name": "Houseboat",
     "types": ["land", "water", "open"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_houseboat.png"
   },
   {
     "name": "Jungle Swamp",
     "types": ["land", "water", "open"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_jungle_swamp.png"
   },
   {
     "name": "Ravines",
     "types": ["land", "open"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_ravines.png"
   },
   {
     "name": "Serengeti",
     "types": ["land", "open"],
-    "img": "ttl1_atacama.png"
+    "img": "ttl1_serengeti.png"
   }
 ]
