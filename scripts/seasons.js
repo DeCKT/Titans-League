@@ -59,12 +59,19 @@ season.leagues.forEach((league) => {
   const section = document.createElement('li')
   const anchor = document.createElement('a')
   const icon = document.createElement('img')
+  const title = document.createElement('p')
 
   icon.src = leagueIcon
-  anchor.textContent = capitalizedLeague
+  icon.classList = "group-hover:scale-108 duration-100"
+
+  title.textContent = capitalizedLeague
+  title.classList = 'text-center font-semibold text-2xl'
+
   anchor.href = `#${league}`
+  anchor.classList = 'block pb-4 rounded-md group'
   
   anchor.appendChild(icon)
+  anchor.appendChild(title)
   section.appendChild(anchor)
 
   leaguesSelectorContainer.appendChild(section)
@@ -80,6 +87,7 @@ season.leagues.forEach((league) => {
   const selectedLeague = seasonLeagues.find((item) => item.league === league)
 
   header.textContent = capitalizedLeague
+  header.classList = 'font-semibold text-lg pt-14'
 
   dates.textContent = `${new Date(selectedLeague.start_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})} - ${new Date(selectedLeague.end_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})}`
 
@@ -96,20 +104,56 @@ season.leagues.forEach((league) => {
     const selectedGroup = seasonGroups.find((item) => item.group === group && item.league === league)
 
     groupHeader.textContent = `Group ${group}`
+    groupHeader.classList = 'text-center font-semibold text-xl'
 
-    selectedGroup?.players.forEach((player) => {
+    groupList.classList = 'grid grid-cols-6'
+
+    selectedGroup?.players.forEach((player, index) => {
+
+      let classes = ''
+
+      switch (index) {
+        case 0:
+          classes = 'col-start-3 row-start-1'
+          break;
+        case 1:
+          classes = 'col-start-2 row-start-2'
+          break;
+        case 2:
+          classes = 'col-start-4 row-start-2'
+          break;
+        case 3:
+          classes = 'col-start-1 row-start-3'
+          break;
+        case 4:
+          classes = 'col-start-3 row-start-3'
+          break;
+        case 5:
+          classes = 'col-start-5 row-start-3'
+          break;
+        default:
+          break;
+      }
+
+      classes += ' col-span-2 text-center'
+
       const playerItem = document.createElement('li')
       playerItem.textContent = player
+      playerItem.classList = classes
 
       groupList.appendChild(playerItem)
     })
+
+    groupContainer.classList = "bg-gray-800"
 
     groupContainer.append(groupHeader, groupList)
     groups.appendChild(groupContainer)
   })
 
   div.id = league
-  div.classList = 'h-screen border-b-1'
+  div.classList = 'px-4'
+
+  groups.classList = 'grid grid-cols-4 gap-4'
 
   div.appendChild(header)
   div.appendChild(dates)
@@ -126,6 +170,7 @@ season.maps.forEach((map, index) => {
   const container = document.createElement('li')
   const image = document.createElement('img')
   const mapName = document.createElement('div')
+  const p = document.createElement('p')
 
   let classes;
 
@@ -174,10 +219,14 @@ season.maps.forEach((map, index) => {
       break;
   }
 
-  classes += ' col-span-2 row-span-2 cursor-pointer hover:scale-108 duration-100 relative'
+  classes += ' col-span-2 row-span-2 cursor-pointer hover:scale-108 duration-100 relative group'
 
-  mapName.classList = 'absolute w-full h-full top-0 left-0 z-10 text-center flex items-center justify-center'
-  mapName.textContent = mapJson.name
+  mapName.classList = 'transition-all absolute w-full h-full top-0 left-0 z-10 text-center flex items-center justify-center scale-30 opacity-0 group-hover:scale-100 group-hover:opacity-100 duration-300'
+
+  p.classList = "bg-slate-800 px-4 py-2 rounded-md font-medium"
+  p.textContent = mapJson.name;
+  
+  mapName.appendChild(p)
 
   let style = "clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%)"
 
