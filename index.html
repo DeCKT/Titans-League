@@ -5,9 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles/tw-main.css" rel="stylesheet" />
     <title>T90 Titans League</title>
+
+    <style>
+      #tsparticles canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -2153326;
+      }
+    </style>
   </head>
   <body class="bg-gray-950 text-sky-50">
-    <nav class="sticky top-0 w-full">
+    <nav class="sticky top-0 w-full z-100">
       <menu class="relative flex bg-gray-900 z-10">
         <li class="bg-gray-900 z-40">
           <a href="/" class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800">Home</a>
@@ -48,12 +59,20 @@
           </menu>
     </nav>
     <main>
-      <section>
-        <h1></h1>
-        <iframe id="ytplayer" type="text/html" width="720" height="405"
-src="https://www.youtube.com/embed/_lvZAUVUkYE?loop=1"
-frameborder="0" allowfullscreen ></iframe>
-      </section>
+      <div id="tsparticles" class="relative lg:py-16">
+        <section class="max-w-7xl p-4 m-auto flex flex-col lg:grid grid-cols-2">
+        
+          <iframe id="ytplayer" type="text/html" class="aspect-video w-full"
+  src="https://www.youtube.com/embed/_lvZAUVUkYE?loop=1"
+  frameborder="0" allowfullscreen ></iframe>
+          <div class="text-2xl lg:text-xl xl:text-2xl flex flex-col justify-between pt-6 lg:p-6 font-light">
+            <p ><span class="bg-slate-950/75">TTL4 was amazing thanks to the incredible community support with well over a million views! I'm so grateful for my co-casters, content creators, and exceptional team who made it all possible. Seeing the players' excitement and new strategies was fantastic, and I'm already looking forward to making next season even better.</span></p>
+            <p class="mt-2 flex justify-end"><span class="bg-slate-950/75 mr-8">-- T90Official</span></p>
+          </div>
+          
+        </section>
+      </div>
+      
       <section>
         <h2>Recent VODs</h2>
         <menu>
@@ -72,5 +91,40 @@ frameborder="0" allowfullscreen ></iframe>
       </section>
     </main>
     <script src="/scripts/navbar.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
+  <script type="text/javascript">
+    // All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
+    // The slim version doesn't have the following plugins:
+    // Absorbers, Emitters, PolygonMask, Interactivity Trail
+    const options = {
+      background: {
+        color: "#020618"
+      },
+      fullScreen: {
+        enable: false
+      },
+      particles: {
+        move: {
+          enable: true, // this makes particles move
+          speed: { min: .5, max: 2 }, // this is the speed of the particles
+        },
+        opacity: {
+          value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
+        },
+        size: {
+          value: { min: 1, max: 3 }, // this sets the size of the particles
+        },
+        number: {
+          value: 50
+        },
+        pauseOnBlur: true,
+        pauseOnOutsideViewport: true
+      },
+    };
+
+    // tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
+    tsParticles.load("tsparticles", options);
+  </script>
+
   </body>
 </html>

@@ -2,12 +2,10 @@ import seasons from "../data/seasons.json";
 import maps from "../data/maps.json";
 import leagues from '../data/leagues.json'
 import groups from '../data/groups.json'
+import games from '../data/games.json'
 
 const seasonNumber = document.querySelector("#seasonNumber");
 const mapContainer = document.querySelector("#mapContainer");
-const seasonLogo = document.querySelector("#seasonLogo");
-const playlistLink = document.querySelector("#playlistLink")
-const playlistImg = document.querySelector("#playlistImg")
 const leaguesSelectorContainer = document.querySelector('#leaguesSelectorContainer')
 const leaguesContainer = document.querySelector('#leaguesContainer')
 
@@ -18,6 +16,7 @@ const seasonNum = params.get("season");
 const season = seasons.find((season) => season.name === `Season ${seasonNum}`);
 const seasonLeagues = leagues.filter((league) => league.season === seasonNum);
 const seasonGroups = groups.filter((group) => group.season === seasonNum)
+const seasonGames = games.filter((game) => game.season === seasonNum)
 
 
 // set h1
@@ -37,6 +36,8 @@ document.title = `TTL | Season ${seasonNum}`;
 
 // build leagues
 season.leagues.forEach((league) => {
+
+  const leagueGames = seasonGames.filter((game) => game.league === league)
 
   const capitalizedLeague = league.charAt(0).toUpperCase() + league.slice(1)
   let leagueIcon
@@ -83,6 +84,7 @@ season.leagues.forEach((league) => {
   const dates = document.createElement('div')
   const prize = document.createElement('div')
   const groups = document.createElement('section')
+  const playoffs = document.createElement('section')
 
   const selectedLeague = seasonLeagues.find((item) => item.league === league)
 
@@ -91,11 +93,11 @@ season.leagues.forEach((league) => {
 
   dates.textContent = `${new Date(selectedLeague.start_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})} - ${new Date(selectedLeague.end_date).toLocaleDateString(undefined, {year: "numeric", month: "long", day: "numeric"})}`
 
-  
   prize.textContent = `${new Intl.NumberFormat(undefined, {style: 'currency',
     currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 2, currencyDisplay: 'code'
   }).format(selectedLeague.prizepool)}`
 
+  // build groups
   selectedLeague.groups.forEach((group) => {
     const groupContainer = document.createElement('div')
     const groupHeader = document.createElement('h3')
@@ -103,12 +105,31 @@ season.leagues.forEach((league) => {
 
     const selectedGroup = seasonGroups.find((item) => item.group === group && item.league === league)
 
-    groupHeader.textContent = `Group ${group}`
-    groupHeader.classList = 'text-center font-semibold text-xl'
+    const groupGames = leagueGames.filter((game) => game.group === group)
 
-    groupList.classList = 'grid grid-cols-6'
+    groupHeader.textContent = `Group ${group}`
+    groupHeader.classList = 'text-center font-semibold text-xl mb-4'
+
+    groupList.classList = 'grid grid-cols-6 gap-2'
 
     selectedGroup?.players.forEach((player, index) => {
+
+      const playerGames = groupGames.filter((game) => game.player_1.name.toLowerCase() === player.toLowerCase() || game.player_2.name.toLowerCase() === player.toLowerCase())
+
+      console.log(`${player}'s games:`)
+      console.log(playerGames)
+
+      let playerGroupWin = 0, playerGroupLoss = 0;
+
+      playerGames.forEach((g) => {
+        if (g.player_1.name.toLowerCase() === player.toLowerCase() && g.player_1.winner === true) {
+          playerGroupWin++
+        } else if (g.player_2.name.toLowerCase() === player.toLowerCase() && g.player_2.winner === true) {
+          playerGroupWin++
+        } else {
+          playerGroupLoss++
+        }
+      })
 
       let classes = ''
 
@@ -135,21 +156,43 @@ season.leagues.forEach((league) => {
           break;
       }
 
-      classes += ' col-span-2 text-center'
+      classes += ' col-span-2 text-center p-1 border border-sky-50 overflow-hidden whitespace-nowrap text-ellipsis'
 
       const playerItem = document.createElement('li')
-      playerItem.textContent = player
+      const playerName = document.createElement('span')
+      const playerStats = document.createElement('p')
+
+      playerName.textContent = player
+
+      playerStats.textContent = `${playerGroupWin}W-${playerGroupLoss}L`
+      playerStats.classList = 'font-light text-sm'
+
+      playerItem.append(playerName, playerStats)
+
       playerItem.classList = classes
 
-      groupList.appendChild(playerItem)
+      groupList.append(playerItem)
     })
 
-    groupContainer.classList = "bg-gray-800"
+    groupContainer.classList = "bg-gray-800 p-4"
 
     groupContainer.append(groupHeader, groupList)
     groups.appendChild(groupContainer)
   })
 
+  // build playoffs
+  const bracket = document.createElement('div')
+  const roundOf12 = document.createElement('div')
+  const quarterfinals = document.createElement('div')
+  const semifinals = document.createElement('div')
+  const finals = document.createElement('div')
+
+  
+
+  bracket.append(roundOf12, quarterfinals, semifinals, finals)
+  playoffs.appendChild(bracket)
+
+  // construct league
   div.id = league
   div.classList = 'px-4'
 
@@ -159,6 +202,7 @@ season.leagues.forEach((league) => {
   div.appendChild(dates)
   selectedLeague.prizepool ? div.appendChild(prize) : null
   div.appendChild(groups)
+  div.appendChild(playoffs)
 
   leaguesContainer.appendChild(div)
 })

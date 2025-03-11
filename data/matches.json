@@ -17,8 +17,29 @@
     "league": "platinum",
     "round": "1",
     "type": "all",
-    "max_rounds": "3",
+    "max_rounds": 3,
     "group": "A",
     "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw"
+  },
+  {
+    "player_1": {
+      "name": "TheViper",
+      "civs": ["Chinese", "Bohemians", "Berbers", "Huns", "Sicilians", "Tatars", "Saracens", "Cumans"],
+      "score": 1
+    },
+    "player_2": {
+      "name": "Villese",
+      "civs": ["Mayans", "Poles", "Byzantines", "Japanese", "Franks", "Turks", "Britons", "Magyars"],
+      "score": 4
+    },
+    "maps": ["Cross", "Arabia", "Arena", "Serengeti", "Fortified Clearing", "Jungle Swamp", "Gold Rush"],
+    "map_draft": "https://aoe2cm.net/draft/qKUon",
+    "civ_draft": "https://aoe2cm.net/draft/FZxHT",
+    "season": "1",
+    "league": "platinum",
+    "type": "best of",
+    "max_rounds": 7,
+    "stage": "semifinals",
+    "vod": "https://www.youtube.com/watch?v=hz4gFRc0SaQ"
   }
 ]

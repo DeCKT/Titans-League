@@ -55,5 +55,23 @@
     "round": "1",
     "vod": "https://www.youtube.com/watch?v=yFrX3A7jTuw&t=4286s",
     "length": 2718
+  },
+  {
+    "player_1": {
+      "name": "TheViper",
+      "civ": "Berbers",
+      "winner": false
+    },
+    "player_2": {
+      "name": "Villese",
+      "civ": "Byzantines",
+      "winner": true
+    },
+    "map":"Gold Rush",
+    "season": "1",
+    "league": "platinum",
+    "stage": "semifinals",
+    "vod": "https://www.youtube.com/watch?v=hz4gFRc0SaQ",
+    "length": 2439
   }
 ]
