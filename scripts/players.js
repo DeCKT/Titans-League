@@ -84,7 +84,7 @@ players.forEach((player) => {
     normalizedName === player.name ? "" : normalizedName
   }" style="background-image: url('${
     player.img ?? "../assets/playerunknown.png"
-  }')" class="bg-center w-full max-w-[calc((100%-0.75rem)/2)] sm:max-w-[calc((100%-1.5rem)/3)] md:max-w-[calc((100%-2.25rem)/4)] lg:max-w-[calc((100%-3rem)/5)] xl:max-w-[calc((100%-3.75rem)/6)] 2xl:max-w-[calc((100%-4.5rem)/7)] bg-no-repeat bg-cover aspect-3/4 duration-100 overflow-hidden rounded-md hover:outline-2 hover:outline-sky-50 hover:scale-102 player-card">
+  }')" class="bg-center w-full bg-no-repeat bg-cover aspect-3/4 duration-100 overflow-hidden rounded-md hover:outline-2 hover:outline-sky-50 hover:scale-102 player-card">
       <a href="/player?ign=${
         player.ign
       }" class="bg-linear-to-t from-black/80 from-30% to-black/0 w-full h-full flex flex-col text-center p-2">

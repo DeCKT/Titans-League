@@ -18,53 +18,71 @@
     </style>
   </head>
   <body class="bg-gray-950 text-sky-50">
-    <nav class="sticky top-0 w-full z-100">
-      <menu class="relative flex bg-gray-900 z-10">
-        <li class="bg-gray-900 z-40">
-          <a href="/" class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800">Home</a>
-        </li>
-        <li class="z-10 bg-gray-900" id="seasonSelector">
-          <button id="seasonSelectorButton" class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50">
-            Seasons
-            <span class="self-center"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="3"
-                stroke="currentColor"
-                class="size-3 duration-200"
-                id="dropdownSvg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
-          </button>
-        </li>
-        <li class="bg-gray-900 z-10">
-          <a href="/players" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Players</a>
-        </li>
-        <li class="bg-gray-900 z-10">
-          <a href="/maps" class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800">Maps</a>
-        </li>
-      </menu>
-      <menu
-            class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
-            id="dropdownMenu"
+    <nav class="sticky top-0 w-full z-50">
+  <menu class="relative flex bg-gray-900 z-10 text-white">
+    <li class="bg-gray-900 z-40">
+      <a
+        href="/"
+        class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800"
+        >Home</a
+      >
+    </li>
+    <li class="z-10 bg-gray-900" id="seasonSelector">
+      <button
+        id="seasonSelectorButton"
+        class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
+      >
+        Seasons
+        <span class="self-center"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor"
+            class="size-3 duration-200"
+            id="dropdownSvg"
           >
-          </menu>
-    </nav>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+    <li class="bg-gray-900 z-10">
+      <a
+        href="/players"
+        class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+        >Players</a
+      >
+    </li>
+    <li class="bg-gray-900 z-10">
+      <a
+        href="/maps"
+        class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+        >Maps</a
+      >
+    </li>
+    
+  </menu>
+  
+  <!-- Season Dropdown Menu -->
+  <menu
+    class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
+    id="dropdownMenu"
+  >
+  </menu>
+</nav>
     <main>
       <div id="tsparticles" class="relative lg:py-16">
         <section class="max-w-7xl p-4 m-auto flex flex-col lg:grid grid-cols-2">
         
           <iframe id="ytplayer" type="text/html" class="aspect-video w-full"
-  src="https://www.youtube.com/embed/_lvZAUVUkYE?loop=1"
-  frameborder="0" allowfullscreen ></iframe>
+            src="https://www.youtube.com/embed/_lvZAUVUkYE?loop=1"
+            frameborder="0" allowfullscreen ></iframe>
           <div class="text-2xl lg:text-xl xl:text-2xl flex flex-col justify-between pt-6 lg:p-6 font-light">
             <p ><span class="bg-slate-950/75">TTL4 was amazing thanks to the incredible community support with well over a million views! I'm so grateful for my co-casters, content creators, and exceptional team who made it all possible. Seeing the players' excitement and new strategies was fantastic, and I'm already looking forward to making next season even better.</span></p>
             <p class="mt-2 flex justify-end"><span class="bg-slate-950/75 mr-8">-- T90Official</span></p>
@@ -73,21 +91,153 @@
         </section>
       </div>
       
-      <section>
-        <h2>Recent VODs</h2>
-        <menu>
-          <li>
-            <div>T90Official</div>
-            <div>Season 4</div>
-            <div>Platinum</div>
-            <div>Group D</div>
-            <div>Round 3</div>
-            <div>ACCM vs. MbL</div>
-            <div>
-              <img src="https://img.youtube.com/vi/Q5kqp8Y9LNs/mqdefault.jpg" />
+      <section class="text-lg relative">
+        <div class="sticky top-12 bg-gray-950 z-20">
+          <h1 class="uppercase font-medium text-2xl max-w-7xl p-4 m-auto">What is Titans League?</h1>
+        </div>
+        
+        <div class="flex flex-col lg:grid grid-cols-2 max-w-7xl p-4 m-auto">
+          <div class="flex justify-center align-middle bg-[url(/assets/404image.png)] bg-center bg-no-repeat bg-cover relative">
+            <div class="absolute top-0 left-0 size-full bg-gray-950/40"></div>
+            <img class="max-w-80 p-10 z-10 drop-shadow-[8px_11px_1px_#030712]" src="/assets/s1-logo.png" />
+          </div>
+          <div class="flex justify-center content-center flex-wrap">
+            <p class="text-center max-w-lg h-fit text-2xl font-light">T90 Titans League (TTL) is a reoccurring Age of Empires 2 tournament, divided into 3 leagues:<br />Platinum, Gold, and Silver.</p>
+          </div>
+        </div>
+        
+        <div class="flex flex-col gap-8 max-w-7xl p-4 m-auto">
+          <div class="flex justify-center content-center flex-wrap">
+            <p class="text-center h-fit text-2xl font-light max-w-3xl">In Platinum, players are placed into 4 groups of 6. Each player will play a round of 3 games against the other players in their group. 5th and 6th seeds are relegated to Gold league for the following season. The 4th seed in each group does not advance, but is guaranteed a spot in Platinum the following season. The top 3 players advance to the playoffs bracket.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 text-center font-light">
+            <div class="bg-gray-900 p-2">
+              <div class="pb-2">Group A</div>
+              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">classicpro</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">DauT</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">JorDan_AoE</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">miguel</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">saymyname</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">TheViper</li>
+              </ul>
             </div>
-          </li>
-        </menu>
+
+            <div class="bg-gray-900 p-2">
+              <div class="pb-2">Group B</div>
+              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Barles</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">bruh</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Hera</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">The_Dragonstar</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Villese</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Yo</li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-900 p-2">
+              <div class="pb-2">Group C</div>
+              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">BacT</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Capoch</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Liereyy</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">slam</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">SongSong</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Vinchester</li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-900 p-2">
+              <div class="pb-2">Group D</div>
+              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">ACCM</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">BadBoy</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">dogao</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">MbL</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Nicov</li>
+                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">TaToH</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:grid lg:grid-cols-2 max-w-7xl p-4 m-auto">
+          <div class="flex justify-center content-center flex-wrap">
+            <p class="text-center max-w-lg h-fit text-2xl font-light">The top 3 players in each group are seeded into a round-of-12, "best-of" bracket. Players progress through the bracket until a winner is decided.</p>
+          </div>
+          <div class="bg-gray-900 font-light p-2 lg:ml-2">
+            <div class="text-center pb-2">Playoffs</div>
+            <div class="grid grid-cols-4 gap-8">
+              <div class="flex flex-col gap-4 justify-around">
+                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Liereyy</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Yo</div>
+                </div>
+                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Villese</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Capoch</div>
+                </div>
+                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">JorDan_AoE</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">TaToH</div>
+                </div>
+                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Nicov</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">DauT</div>
+                </div>
+              </div>
+            
+              <div class="flex flex-col gap-4 justify-around">
+                <div class="border border-sky-50 relative after:absolute after:w-4 after:-right-4 after:h-[92px] after:border-y after:border-r after:border-sky-50 after:top-1/2 after:-translate-y-px">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">TheViper</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Yo</div>
+                </div>
+                <div class="border border-sky-50 relative  ">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">MbL</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Villese</div>
+                </div>
+                <div class="border border-sky-50 relative after:absolute after:w-4 after:-right-4 after:h-[92px] after:border-y after:border-r after:border-sky-50 after:top-1/2 after:-translate-y-px">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Hera</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">JorDan_AoE</div>
+                </div>
+                <div class="border border-sky-50 relative  ">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Vinchester</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Nicov</div>
+                </div>
+              </div>
+            
+              <div class="flex flex-col gap-4 justify-around">
+                <div class="border border-sky-50 relative after:absolute after:w-4 after:-right-4 after:h-[183px] after:border-y after:border-r after:border-sky-50 after:top-1/2 before:absolute before:w-[18px] before:-left-[18px] before:h-px before:border-b before:border-sky-50 before:top-1/2">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">TheViper</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Villese</div>
+                </div>
+                <div class="border border-sky-50 relative before:absolute before:w-[18px] before:-left-[18px] before:h-px before:border-b before:border-sky-50 before:top-1/2">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Hera</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Vinchester</div>
+                </div>
+              </div>
+            
+              <div class="flex flex-col gap-4 justify-around">
+                <div class="border border-sky-50 relative before:absolute before:w-[18px] before:-left-[18px] before:h-px before:border-b before:border-sky-50 before:top-1/2 ">
+                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Villese</div>
+                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Vinchester</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col gap-8 max-w-7xl p-4 m-auto">
+          <div class="flex justify-center content-center flex-wrap">
+            <p class="text-center h-fit text-2xl font-light max-w-3xl">Gold league follows a similar format, with 4 groups of 6. Each group's top players qualify for a decider match to determine who will advance to Platinum. The bottom 2 from each group are relegated to Silver league.</p>
+          </div>
+          <div>
+
+          </div>
+          </div>
+        
+        <p>Silver league also sees players placed in groups, however, players instead compete in a single-elimination "best-of" bracket. The winner of each group qualifies for the Gold leage in the following season.</p>
       </section>
     </main>
     <script src="/scripts/navbar.js" type="module"></script>

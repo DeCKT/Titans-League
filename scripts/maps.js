@@ -6,7 +6,7 @@ maps.forEach((map) => {
   mapsContainer.innerHTML += `
     <li data-info="${map.name} ${map.types.join(
     " "
-  )}" class="w-full max-w-[calc((100%-0.75rem)/2)] sm:max-w-[calc((100%-1.5rem)/3)] md:max-w-[calc((100%-2.25rem)/4)] lg:max-w-[calc((100%-3rem)/5)] xl:max-w-[calc((100%-3.75rem)/6)] 2xl:max-w-[calc((100%-4.5rem)/7)] duration-100 rounded-md hover:outline-2 hover:outline-sky-50 hover:scale-102 relative map-card">
+  )}" class="w-full duration-100 rounded-md hover:outline-2 hover:outline-sky-50 hover:scale-102 relative map-card">
       <img src="${
         map.img ? `/assets/maps/${map.img}` : "/assets/maps/cm_generic.png"
       }">
