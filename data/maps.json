@@ -1,57 +1,285 @@
 [
   {
+    "name": "Acropolis",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl2-acropolis.png"
+  },
+  {
     "name": "Arabia",
-    "types": ["open", "land"],
+    "types": [
+      "land",
+      "open"
+    ],
     "img": "ttl1_arabia.png"
   },
   {
     "name": "Arena",
-    "types": ["land", "closed"],
+    "types": [
+      "land",
+      "closed"
+    ],
     "img": "ttl1_arena.png"
   },
   {
     "name": "Atacama",
-    "types": ["land", "water", "open"],
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
     "img": "ttl1_atacama.png"
   },
   {
+    "name": "Coast to Mountain",
+    "types": [
+      "land",
+      "open",
+      "water",
+      "nomad"
+    ],
+    "img": "ttl3-coast-to-mountain.png"
+  },
+  {
     "name": "Cross",
-    "types": ["land", "water", "open"],
+    "types": [
+      "open",
+      "water"
+    ],
     "img": "ttl1_cross.png"
   },
   {
+    "name": "Dzong",
+    "types": [
+      "land",
+      "closed"
+    ],
+    "img": "ttl4-dzong.png"
+  },
+  {
+    "name": "El Dorado",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl3-el-dorado.png"
+  },
+  {
+    "name": "Evacuation",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl4-evacuation.png"
+  },
+  {
     "name": "Fortified Clearing",
-    "types": ["land", "open", "closed"],
+    "types": [
+      "land",
+      "open",
+      "closed"
+    ],
     "img": "ttl1_fortified_clearing.png"
   },
   {
+    "name": "Fortress",
+    "types": [
+      "land",
+      "closed",
+      "regicide"
+    ],
+    "img": "ttl2-fortress.png"
+  },
+  {
+    "name": "Fractal",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl3-fractal.png"
+  },
+  {
+    "name": "Ghost Lake",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl2-ghost-lake.png"
+  },
+  {
     "name": "Gold Rush",
-    "types": ["land", "open"],
+    "types": [
+      "land",
+      "open"
+    ],
     "img": "ttl1_gold_rush.png"
   },
   {
+    "name": "Golden Pit",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl3-golden-pit.png"
+  },
+  {
     "name": "Golden Swamp",
-    "types": ["land", "open", "water"],
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
     "img": "ttl1_golden_swamp.png"
   },
   {
+    "name": "Graveyards",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl3-graveyards.png"
+  },
+  {
+    "name": "Hideout",
+    "types": [
+      "land",
+      "closed"
+    ],
+    "img": "ttl3-hideout.png"
+  },
+  {
     "name": "Houseboat",
-    "types": ["land", "water", "open"],
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
     "img": "ttl1_houseboat.png"
   },
   {
     "name": "Jungle Swamp",
-    "types": ["land", "water", "open"],
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
     "img": "ttl1_jungle_swamp.png"
   },
   {
+    "name": "Kilimanjaro",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl2-kilimanjaro.png"
+  },
+  {
+    "name": "Land Madness",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl3-land-madness.png"
+  },
+  {
+    "name": "Migration",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl3-migration.png"
+  },
+  {
+    "name": "Nomad",
+    "types": [
+      "land",
+      "open",
+      "water",
+      "nomad"
+    ],
+    "img": "ttl2-nomad.png"
+  },
+  {
+    "name": "Pacific Islands",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl4-pacific-islands.png"
+  },
+  {
     "name": "Ravines",
-    "types": ["land", "open"],
+    "types": [
+      "land",
+      "open"
+    ],
     "img": "ttl1_ravines.png"
   },
   {
+    "name": "Rocky Forest",
+    "types": [
+      "land",
+      "open",
+      "closed"
+    ],
+    "img": "ttl4-rocky-forest.png"
+  },
+  {
+    "name": "Scandinavia",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl2-scandanavia.png"
+  },
+  {
     "name": "Serengeti",
-    "types": ["land", "open"],
+    "types": [
+      "land",
+      "open"
+    ],
     "img": "ttl1_serengeti.png"
+  },
+  {
+    "name": "Shoals",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl2-shoals.png"
+  },
+  {
+    "name": "Socotra",
+    "types": [
+      "land",
+      "open"
+    ],
+    "img": "ttl3-socotra.png"
+  },
+  {
+    "name": "Spiral",
+    "types": [
+      "land",
+      "open",
+      "water"
+    ],
+    "img": "ttl3-spiral.png"
+  },
+  {
+    "name": "ZeWall",
+    "types": [
+      "land",
+      "closed"
+    ],
+    "img": "ttl3-ze-wall.png"
   }
 ]

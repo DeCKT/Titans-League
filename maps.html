@@ -7,61 +7,95 @@
     <title>TTL | Maps</title>
   </head>
   <body class="bg-gray-950 text-sky-50">
-    <nav class="sticky top-0 w-full z-50">
-      <menu class="relative flex bg-gray-900 z-10">
-        <li class="bg-gray-900 z-40">
-          <a
-            href="/"
-            class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800"
-            >Home</a
-          >
-        </li>
-        <li class="z-10 bg-gray-900" id="seasonSelector">
-          <button
-            id="seasonSelectorButton"
-            class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
-          >
-            Seasons
-            <span class="self-center"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="3"
-                stroke="currentColor"
-                class="size-3 duration-200"
-                id="dropdownSvg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
-          </button>
-        </li>
-        <li class="bg-gray-900 z-10">
-          <a
-            href="/players"
-            class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
-            >Players</a
-          >
-        </li>
-        <li class="bg-gray-900 z-10">
-          <a
-            href="/maps"
-            class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
-            >Maps</a
-          >
-        </li>
-      </menu>
-      <menu
-        class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
-        id="dropdownMenu"
+    <nav class="sticky top-0 w-full text-xl z-10 text-center">
+      <div class="relative w-full flex bg-gray-900">
+  <ul class="relative flex bg-gray-900 z-10 text-white">
+    <li class="bg-gray-900 z-40">
+      <a
+        href="/"
+        class="block px-4 py-3 ml-4 duration-100 hover:bg-slate-800"
+        >Home</a
       >
-      </menu>
-    </nav>
+    </li>
+    <li class="z-10 bg-gray-900" id="seasonSelector">
+      <button
+        id="seasonSelectorButton"
+        class="px-4 py-3 flex gap-2 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
+      >
+        Seasons
+        <span class="self-center mt-1"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor"
+            class="size-4 duration-200"
+            id="dropdownSvg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+    <li class="bg-gray-900 z-10">
+      <a
+        href="/players"
+        class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+        >Players</a
+      >
+    </li>
+    <li class="bg-gray-900 z-10">
+      <a
+        href="/maps"
+        class="block px-4 py-3 duration-100 bg-gray-900 hover:bg-slate-800"
+        >Maps</a
+      >
+    </li>
+  </ul>
+
+  <div class="flex ml-auto">
+    <div class="bg-gray-900 z-10">
+      <span class="block px-4 py-3 duration-100 bg-gray-900">Season 5 Coming Soon!</span>
+    </div>
+    <div class="bg-gray-900 z-10 self-center mx-4">
+      <a href="https://www.youtube.com/watch?v=cgIQ7zitif4" target="_blank" rel="noreferrer" class=" text-sm block px-3 py-1.5 rounded-2xl bg-amber-900 hover:bg-amber-700 duration-100">Watch Announcement</a>
+    </div>
+     <!-- <div class="bg-gray-900 z-10">
+      <button class="px-4 py-3 flex gap-2 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50 mr-4" id="settingsSelectorButton">Settings
+        <span class="self-center mt-1"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor"
+            class="size-4 duration-200"
+            id="dropdownSvg2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </span>
+      </button> -->
+    </div>
+  </div>
+</div>
+  
+  <!-- dropdown menus -->
+  <ul
+    class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
+    id="dropdownMenu"
+  ></ul>
+<!-- <div class="absolute right-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 h-screen w-64 flex flex-col" id="settingsDropdown"></div> -->
+</nav>
     <main class="p-4">
       <form
         class="w-full flex mb-4 border border-sky-50 rounded-md scheme-dark"

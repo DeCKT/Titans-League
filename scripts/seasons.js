@@ -13,10 +13,16 @@ const queries = window.location.search;
 const params = new URLSearchParams(queries);
 const seasonNum = params.get("season");
 
-const season = seasons.find((season) => season.name === `Season ${seasonNum}`);
-const seasonLeagues = leagues.filter((league) => league.season === seasonNum);
-const seasonGroups = groups.filter((group) => group.season === seasonNum)
-const seasonGames = games.filter((game) => game.season === seasonNum)
+let season, seasonLeagues, seasonGroups, seasonGames
+
+if (seasonNum) {
+  season = seasons.find((season) => season.name === `Season ${seasonNum}`);
+  seasonLeagues = leagues.filter((league) => league.season === seasonNum);
+  seasonGroups = groups.filter((group) => group.season === seasonNum)
+  seasonGames = games.filter((game) => game.season === seasonNum)
+}
+
+
 
 
 // set h1
@@ -116,9 +122,6 @@ season.leagues.forEach((league) => {
 
       const playerGames = groupGames.filter((game) => game.player_1.name.toLowerCase() === player.toLowerCase() || game.player_2.name.toLowerCase() === player.toLowerCase())
 
-      console.log(`${player}'s games:`)
-      console.log(playerGames)
-
       let playerGroupWin = 0, playerGroupLoss = 0;
 
       playerGames.forEach((g) => {
@@ -180,17 +183,286 @@ season.leagues.forEach((league) => {
     groups.appendChild(groupContainer)
   })
 
-  // build playoffs
-  const bracket = document.createElement('div')
-  const roundOf12 = document.createElement('div')
-  const quarterfinals = document.createElement('div')
-  const semifinals = document.createElement('div')
-  const finals = document.createElement('div')
+// build playoffs
+const playoffGames = leagueGames.filter(game => game.group === null && game.round);
 
+// Group games by round
+const gamesByRound = {
+  'Round of 12': playoffGames.filter(g => g.round === 'Round of 12'),
+  'Quarterfinals': playoffGames.filter(g => g.round === 'Quarterfinals'),
+  'Semifinals': playoffGames.filter(g => g.round === 'Semifinals'),
+  'Finals': playoffGames.filter(g => g.round === 'Finals')
+};
+
+// Get unique matchups per round (group games from the same series)
+const getMatchups = (games) => {
+  const matchups = new Map();
   
+  games.forEach(game => {
+    // Create a consistent key for the matchup
+    const players = [game.player_1.name, game.player_2.name].sort();
+    const key = players.join(' vs ');
+    
+    if (!matchups.has(key)) {
+      matchups.set(key, {
+        player1: players[0],
+        player2: players[1],
+        games: [],
+        winner: null,
+        score: { [players[0]]: 0, [players[1]]: 0 }
+      });
+    }
+    
+    const matchup = matchups.get(key);
+    matchup.games.push(game);
+    
+    // Update scores
+    if (game.player_1.winner) {
+      matchup.score[game.player_1.name]++;
+    } else {
+      matchup.score[game.player_2.name]++;
+    }
+  });
+  
+  // Determine series winners
+  matchups.forEach(matchup => {
+    if (matchup.score[matchup.player1] > matchup.score[matchup.player2]) {
+      matchup.winner = matchup.player1;
+    } else {
+      matchup.winner = matchup.player2;
+    }
+  });
+  
+  return Array.from(matchups.values());
+};
 
-  bracket.append(roundOf12, quarterfinals, semifinals, finals)
-  playoffs.appendChild(bracket)
+// Build bracket visualization
+const bracket = document.createElement('div');
+bracket.classList = 'mt-8 p-6 bg-gray-900 rounded-lg';
+
+const bracketTitle = document.createElement('h3');
+bracketTitle.textContent = 'Playoffs';
+bracketTitle.classList = 'text-2xl font-bold mb-6 text-center';
+bracket.appendChild(bracketTitle);
+
+// Create bracket wrapper with custom styling
+const bracketWrapper = document.createElement('div');
+bracketWrapper.classList = 'relative';
+
+// Add custom CSS for bracket lines
+const style = document.createElement('style');
+style.textContent = `
+  .bracket-match {
+    position: relative;
+    margin: 16px 0;
+  }
+  
+  /* Horizontal line from match to next round */
+  .bracket-match::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 30px;
+    height: 2px;
+    background-color: rgb(75, 85, 99);
+  }
+  
+  /* Don't show line after finals */
+  .bracket-round:last-child .bracket-match::after {
+    display: none;
+  }
+  
+  /* Special handling for Round of 12 - just horizontal lines */
+  .round-of-12 .bracket-match::after {
+    width: 30px;
+  }
+  
+  /* Bracket connectors for matches that merge */
+  .bracket-connector-pair {
+    position: relative;
+  }
+  
+  .bracket-connector-pair::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: -30px;
+    width: 2px;
+    height: 50%;
+    background-color: rgb(75, 85, 99);
+  }
+  
+  .bracket-connector-pair::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 30px;
+    height: 2px;
+    background-color: rgb(75, 85, 99);
+  }
+  
+  /* Special vertical line for semifinals to finals */
+  .semifinals-connector::before {
+    height: calc(100% + 32px);
+    top: -16px;
+  }
+  
+  .bracket-round {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 600px;
+    position: relative;
+  }
+  
+  .round-header {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+`;
+document.head.appendChild(style);
+
+const bracketContainer = document.createElement('div');
+bracketContainer.classList = 'grid grid-cols-4 gap-16 items-stretch';
+
+// Helper function to create a match element
+const createMatchElement = (matchup) => {
+  const matchDiv = document.createElement('div');
+  matchDiv.classList = 'bg-gray-800 rounded p-2 space-y-1 min-w-[160px]';
+  
+  // Player 1
+  const player1Div = document.createElement('div');
+  player1Div.classList = `flex justify-between items-center px-2 py-1 rounded text-sm ${
+    matchup.winner === matchup.player1 ? 'bg-green-900/30 font-semibold' : 'opacity-60'
+  }`;
+  const player1Name = document.createElement('span');
+  player1Name.textContent = matchup.player1;
+  player1Name.classList = 'truncate mr-2';
+  const player1Score = document.createElement('span');
+  player1Score.textContent = matchup.score[matchup.player1];
+  player1Score.classList = 'text-xs font-mono';
+  player1Div.append(player1Name, player1Score);
+  
+  // Player 2
+  const player2Div = document.createElement('div');
+  player2Div.classList = `flex justify-between items-center px-2 py-1 rounded text-sm ${
+    matchup.winner === matchup.player2 ? 'bg-green-900/30 font-semibold' : 'opacity-60'
+  }`;
+  const player2Name = document.createElement('span');
+  player2Name.textContent = matchup.player2;
+  player2Name.classList = 'truncate mr-2';
+  const player2Score = document.createElement('span');
+  player2Score.textContent = matchup.score[matchup.player2];
+  player2Score.classList = 'text-xs font-mono';
+  player2Div.append(player2Name, player2Score);
+  
+  matchDiv.append(player1Div, player2Div);
+  
+  // Add VOD link if available
+  const firstGame = matchup.games[0];
+  if (firstGame.vod) {
+    matchDiv.classList.add('cursor-pointer', 'hover:bg-gray-700', 'transition-colors');
+    matchDiv.addEventListener('click', () => {
+      window.open(firstGame.vod, '_blank');
+    });
+    
+    // Add play icon
+    const vodIndicator = document.createElement('div');
+    vodIndicator.classList = 'text-xs text-center mt-1 text-blue-400';
+    vodIndicator.innerHTML = '▶ Watch';
+    matchDiv.appendChild(vodIndicator);
+  }
+  
+  return matchDiv;
+};
+
+// Create round columns
+const rounds = ['Round of 12', 'Quarterfinals', 'Semifinals', 'Finals'];
+rounds.forEach((roundName, roundIndex) => {
+  const roundDiv = document.createElement('div');
+  roundDiv.classList = 'bracket-round';
+  
+  if (roundName === 'Round of 12') {
+    roundDiv.classList.add('round-of-12');
+  }
+  
+  const roundHeader = document.createElement('h4');
+  roundHeader.textContent = roundName;
+  roundHeader.classList = 'round-header font-semibold text-xs uppercase tracking-wider opacity-60';
+  roundDiv.appendChild(roundHeader);
+  
+  const matchupsContainer = document.createElement('div');
+  matchupsContainer.classList = 'flex flex-col justify-center h-full';
+  
+  const matchups = getMatchups(gamesByRound[roundName]);
+  
+  // Calculate spacing based on round
+  let spacingClass = '';
+  if (roundName === 'Semifinals') {
+    spacingClass = 'gap-32'; // Larger gap to center between quarterfinals
+  } else if (roundName === 'Finals') {
+    spacingClass = ''; // Single match, centered
+  } else {
+    spacingClass = 'gap-8'; // Normal spacing
+  }
+  
+  matchupsContainer.classList.add(spacingClass);
+  
+  if (matchups.length === 0) {
+    // Create placeholder matches based on expected number
+    let expectedMatches = 1;
+    if (roundName === 'Round of 12') expectedMatches = 4;
+    else if (roundName === 'Quarterfinals') expectedMatches = 4;
+    else if (roundName === 'Semifinals') expectedMatches = 2;
+    
+    for (let i = 0; i < expectedMatches; i++) {
+      const matchWrapper = document.createElement('div');
+      matchWrapper.classList = 'bracket-match';
+      
+      const emptyMatch = document.createElement('div');
+      emptyMatch.textContent = 'TBD';
+      emptyMatch.classList = 'text-center text-gray-500 text-sm bg-gray-800 rounded p-4 min-w-[160px]';
+      
+      matchWrapper.appendChild(emptyMatch);
+      matchupsContainer.appendChild(matchWrapper);
+    }
+  } else {
+    matchups.forEach((matchup, matchIndex) => {
+      const matchWrapper = document.createElement('div');
+      matchWrapper.classList = 'bracket-match';
+      
+      // Add connector styling for rounds that merge
+      if (roundName === 'Quarterfinals' && (matchIndex === 0 || matchIndex === 2)) {
+        matchWrapper.classList.add('bracket-connector-pair');
+      } else if (roundName === 'Semifinals') {
+        matchWrapper.classList.add('bracket-connector-pair');
+        if (matchIndex === 0) {
+          matchWrapper.classList.add('semifinals-connector');
+        }
+      } else if (roundName === 'Finals') {
+        matchWrapper.classList.add('bracket-connector-pair');
+      }
+      
+      matchWrapper.appendChild(createMatchElement(matchup));
+      matchupsContainer.appendChild(matchWrapper);
+    });
+  }
+  
+  roundDiv.appendChild(matchupsContainer);
+  bracketContainer.appendChild(roundDiv);
+});
+
+bracketWrapper.appendChild(bracketContainer);
+bracket.appendChild(bracketWrapper);
+playoffs.appendChild(bracket);
+
+// Add some styling for the overall playoffs section
+playoffs.classList = 'mt-8 overflow-x-auto';
 
   // construct league
   div.id = league
@@ -208,7 +480,9 @@ season.leagues.forEach((league) => {
 })
 
 // set maps
-season.maps.forEach((map, index) => {
+const mapsArray = leagues.find(league => league.season === seasonNum).maps
+
+mapsArray.forEach((map, index) => {
   const mapJson = maps.find((obj) => obj.name === map);
 
   const container = document.createElement('li')

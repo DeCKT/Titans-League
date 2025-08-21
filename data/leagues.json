@@ -4,16 +4,226 @@
     "league": "platinum",
     "start_date": "2022-06-27",
     "end_date": "2022-08-07",
-    "groups": ["A", "B", "C", "D"],
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Arabia",
+      "Arena",
+      "Atacama",
+      "Cross",
+      "Fortified Clearing",
+      "Gold Rush",
+      "Golden Swamp",
+      "Houseboat",
+      "Jungle Swamp",
+      "Ravines",
+      "Serengeti"
+    ],
     "prizepool": 17300
+  },
+  {
+    "season": "2",
+    "league": "platinum",
+    "start_date": "2023-01-02",
+    "end_date": "2023-02-12",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Acropolis",
+      "Arabia",
+      "Arena",
+      "Cross",
+      "Fortified Clearing",
+      "Fortress",
+      "Ghost Lake",
+      "Kilimanjaro",
+      "Nomad",
+      "Scandinavia",
+      "Shoals"
+    ],
+    "prizepool": 17300
+  },
+  {
+    "season": "3",
+    "league": "platinum",
+    "start_date": "2023-09-04",
+    "end_date": "2023-10-19",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Coast to Mountain",
+      "El Dorado",
+      "Fractal",
+      "Golden Pit",
+      "Graveyards",
+      "Hideout",
+      "Land Madness",
+      "Migration",
+      "Socotra",
+      "Spiral",
+      "ZeWall"
+    ],
+    "prizepool": 17300
+  },
+  {
+    "season": "4",
+    "league": "platinum",
+    "start_date": "2025-01-13",
+    "end_date": "2025-03-02",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Acropolis",
+      "Cross",
+      "Dzong",
+      "Evacuation",
+      "Fortified Clearing",
+      "Jungle Swamp",
+      "Kilimanjaro",
+      "Pacific Islands",
+      "Ravines",
+      "Rocky Forest",
+      "Shoals"
+    ],
+    "prizepool": 32800
+  },
+  {
+    "season": "5",
+    "league": "platinum",
+    "start_date": "2026-01-26",
+    "end_date": "2026-03-22",
+    "groups": [],
+    "maps": [],
+    "prizepool": 100000
   },
   {
     "season": "1",
     "league": "gold",
     "start_date": "2022-06-27",
     "end_date": "2022-08-13",
-    "groups": ["A", "B", "C", "D"],
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Arabia",
+      "Arena",
+      "Atacama",
+      "Cross",
+      "Fortified Clearing",
+      "Gold Rush",
+      "Golden Swamp",
+      "Houseboat",
+      "Jungle Swamp",
+      "Ravines",
+      "Serengeti"
+    ],
     "prizepool": 5200
+  },
+  {
+    "season": "2",
+    "league": "gold",
+    "start_date": "2023-01-02",
+    "end_date": "2023-02-07",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Acropolis",
+      "Arabia",
+      "Arena",
+      "Cross",
+      "Fortified Clearing",
+      "Fortress",
+      "Ghost Lake",
+      "Kilimanjaro",
+      "Nomad",
+      "Scandinavia",
+      "Shoals"
+    ],
+    "prizepool": 5200
+  },
+  {
+    "season": "3",
+    "league": "gold",
+    "start_date": "2023-07-31",
+    "end_date": "2023-09-07",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Coast to Mountain",
+      "El Dorado",
+      "Fractal",
+      "Golden Pit",
+      "Graveyards",
+      "Hideout",
+      "Land Madness",
+      "Migration",
+      "Socotra",
+      "Spiral",
+      "ZeWall"
+    ],
+    "prizepool": 6100
+  },
+  {
+    "season": "4",
+    "league": "gold",
+    "start_date": "2025-01-02",
+    "end_date": "2025-02-09",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "maps": [
+      "Acropolis",
+      "Cross",
+      "Dzong",
+      "Evacuation",
+      "Fortified Clearing",
+      "Jungle Swamp",
+      "Kilimanjaro",
+      "Pacific Islands",
+      "Ravines",
+      "Rocky Forest",
+      "Shoals"
+    ],
+    "prizepool": 15000
+  },
+  {
+    "season": "5",
+    "league": "gold",
+    "start_date": "2026-01-26",
+    "end_date": "2026-03-22",
+    "groups": [],
+    "maps": [],
+    "prizepool": null
   },
   {
     "season": "1",
@@ -31,6 +241,94 @@
       "H",
       "I"
     ],
+    "maps": [
+      "Arabia",
+      "Arena",
+      "Atacama",
+      "Cross",
+      "Fortified Clearing",
+      "Gold Rush",
+      "Golden Swamp",
+      "Houseboat",
+      "Jungle Swamp",
+      "Ravines",
+      "Serengeti"
+    ],
+    "prizepool": null
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "start_date": "2023-07-01",
+    "end_date": "2023-07-29",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "maps": [
+      "Acropolis",
+      "Arabia",
+      "Arena",
+      "Cross",
+      "Fortified Clearing",
+      "Fortress",
+      "Ghost Lake",
+      "Kilimanjaro",
+      "Nomad",
+      "Scandinavia",
+      "Shoals"
+    ],
+    "prizepool": null
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "start_date": "2024-12-01",
+    "end_date": "2024-12-22",
+    "groups": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "maps": [
+      "Coast to Mountain",
+      "El Dorado",
+      "Fractal",
+      "Golden Pit",
+      "Graveyards",
+      "Hideout",
+      "Land Madness",
+      "Migration",
+      "Socotra",
+      "Spiral",
+      "ZeWall"
+    ],
+    "prizepool": 2200
+  },
+  {
+    "season": "5",
+    "league": "silver",
+    "start_date": "2026-01-26",
+    "end_date": "2026-03-22",
+    "groups": [],
+    "maps": [],
     "prizepool": null
   }
 ]

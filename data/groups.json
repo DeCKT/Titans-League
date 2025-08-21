@@ -4,7 +4,881 @@
     "league": "platinum",
     "group": "A",
     "players": [
-      "TheViper", "JorDan_AoE", "DauT", "miguel", "classicpro", "saymyname"
+      "TheViper",
+      "JorDan AoE",
+      "DauT",
+      "Miguel",
+      "Classicpro",
+      "Saymyname"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "platinum",
+    "group": "B",
+    "players": [
+      "Hera",
+      "Villese",
+      "Yo",
+      "Barles",
+      "BruH",
+      "The Dragonstar"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "platinum",
+    "group": "C",
+    "players": [
+      "Vinchester",
+      "Liereyy",
+      "Capoch",
+      "BacT",
+      "Slam",
+      "SongSong"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "platinum",
+    "group": "D",
+    "players": [
+      "MbL",
+      "Nicov",
+      "TaToH",
+      "ACCM",
+      "Dogao",
+      "BadBoy"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "platinum",
+    "group": "A",
+    "players": [
+      "ACCM",
+      "DauT",
+      "Valas",
+      "Running",
+      "Nicov",
+      "Vinchester"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "platinum",
+    "group": "B",
+    "players": [
+      "Yo",
+      "Liereyy",
+      "BacT",
+      "DracKeN",
+      "MbL",
+      "Dark"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "platinum",
+    "group": "C",
+    "players": [
+      "Hera",
+      "JorDan AoE",
+      "Ganji",
+      "Miguel",
+      "Capoch",
+      "KingstoNe"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "platinum",
+    "group": "D",
+    "players": [
+      "TheViper",
+      "Villese",
+      "TaToH",
+      "Barles",
+      "Sitaux",
+      "Sebastian"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "platinum",
+    "group": "A",
+    "players": [
+      "Yo",
+      "DauT",
+      "Daniel",
+      "Valas",
+      "Running",
+      "Lyx"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "platinum",
+    "group": "B",
+    "players": [
+      "ACCM",
+      "Villese",
+      "Dogao",
+      "Margougou",
+      "DracKeN",
+      "Miguel"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "platinum",
+    "group": "C",
+    "players": [
+      "Hera",
+      "FreakinAndy",
+      "Barles",
+      "JorDan AoE",
+      "Ganji",
+      "LaN"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "platinum",
+    "group": "D",
+    "players": [
+      "TheViper",
+      "Liereyy",
+      "TaToH",
+      "Classicpro",
+      "Vivi",
+      "Sobek"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "platinum",
+    "group": "A",
+    "players": [
+      "Liereyy",
+      "Sebastian",
+      "Yo",
+      "The Dragonstar",
+      "DauT",
+      "Margougou"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "platinum",
+    "group": "B",
+    "players": [
+      "Sitaux",
+      "Barles",
+      "Hera",
+      "Classicpro",
+      "Nicov",
+      "Villese"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "platinum",
+    "group": "C",
+    "players": [
+      "TaToH",
+      "Vinchester",
+      "Dogao",
+      "MbL",
+      "ACCM",
+      "Capoch"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "platinum",
+    "group": "D",
+    "players": [
+      "Hearttt",
+      "Dark",
+      "FreakinAndy",
+      "TheViper",
+      "Valas",
+      "Daniel"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "gold",
+    "group": "A",
+    "players": [
+      "Valas",
+      "Vivi",
+      "Margougou",
+      "Repard",
+      "Ubetnir",
+      "Vodka L"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "gold",
+    "group": "B",
+    "players": [
+      "DracKeN",
+      "F1Re",
+      "Sobek",
+      "Nili",
+      "Modri",
+      "Dziamdziak"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "gold",
+    "group": "C",
+    "players": [
+      "Ganji",
+      "Running",
+      "Dark",
+      "FreakinAndy",
+      "Cl3m3nT",
+      "St4rk"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "gold",
+    "group": "D",
+    "players": [
+      "Sitaux",
+      "Sebastian",
+      "KingstoNe",
+      "Daniel",
+      "Overtaken",
+      "The Bloodless"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "gold",
+    "group": "A",
+    "players": [
+      "FreakinAndy",
+      "Daniel",
+      "Hearttt",
+      "Slam",
+      "BadBoy",
+      "Whitecourt"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "gold",
+    "group": "B",
+    "players": [
+      "Sobek",
+      "Classicpro",
+      "Mihai06",
+      "Repard",
+      "Saymyname",
+      "Gabi"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "gold",
+    "group": "C",
+    "players": [
+      "Dogao",
+      "SongSong",
+      "Margougou",
+      "D3rp",
+      "Overtaken",
+      "Nili"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "gold",
+    "group": "D",
+    "players": [
+      "Vivi",
+      "LaN",
+      "Lyx",
+      "The Dragonstar",
+      "F1Re",
+      "Somero"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "gold",
+    "group": "A",
+    "players": [
+      "Sebastian",
+      "Hearttt",
+      "Nicov",
+      "Target331",
+      "El Matador",
+      "Z40"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "gold",
+    "group": "B",
+    "players": [
+      "Capoch",
+      "Vinchester",
+      "Mihai06",
+      "Yasin",
+      "Cloud (Taiwanese player)",
+      "Cyclops"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "gold",
+    "group": "C",
+    "players": [
+      "Sitaux",
+      "The Dragonstar",
+      "Slam",
+      "KingstoNe",
+      "Overtaken",
+      "St4rk"
+    ]
+  },
+  {
+    "season": "3",
+    "league": "gold",
+    "group": "D",
+    "players": [
+      "MbL",
+      "Dark",
+      "Kasva",
+      "Nili",
+      "Repard",
+      "Fedex"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "gold",
+    "group": "A",
+    "players": [
+      "Sobek",
+      "Vivi",
+      "Overtaken",
+      "Slam",
+      "DeaKer",
+      "GUKI",
+      "Lucho"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "gold",
+    "group": "B",
+    "players": [
+      "Repard",
+      "DracKeN",
+      "Prisma09",
+      "Mihai06",
+      "Wide",
+      "Miguel"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "gold",
+    "group": "C",
+    "players": [
+      "Ciskhan",
+      "LaN",
+      "Z40",
+      "KingstoNe",
+      "Running",
+      "Target331"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "gold",
+    "group": "D",
+    "players": [
+      "Ganji",
+      "Lyx",
+      "StonePleaseAoE",
+      "Kasva",
+      "Lewis",
+      "Saymyname"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "A",
+    "players": [
+      "lyx",
+      "ReyO",
+      "ciskhan",
+      "Ozone",
+      "iBUYPOWER",
+      "Shulk",
+      "Uzzi",
+      "Kamigawa"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "B",
+    "players": [
+      "LaN",
+      "Eärnur",
+      "RmcooTheHater",
+      "Kongen",
+      "King_Boo",
+      "PhilippHJS",
+      "Andre_2i",
+      "Micav"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "C",
+    "players": [
+      "StrayDog",
+      "MrOsoVC8",
+      "D3rp",
+      "Socksyy",
+      "Noisick",
+      "Terz",
+      "Biry",
+      "Kellar"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "D",
+    "players": [
+      "Hearttt",
+      "Sir_Hellequinn",
+      "ValihrAnt",
+      "Dratek",
+      "Jibatong",
+      "gadjo_dilo",
+      "LobodeLaNieve",
+      "dave_hun"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "E",
+    "players": [
+      "Whocl",
+      "Zuccolo",
+      "JonSlow",
+      "Levi",
+      "T90Official",
+      "Uzikoti",
+      "Emil :D",
+      "Gabi"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "F",
+    "players": [
+      "Mihai06",
+      "biscuit",
+      "Survivalist",
+      "Tomate",
+      "El_Matador",
+      "Kugelblitz",
+      "TieuQuy",
+      "Paganini"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "G",
+    "players": [
+      "Bad Koala",
+      "m0re",
+      "Monoz",
+      "Shades",
+      "Whitecourt",
+      "Solara",
+      "Cl3m3nT",
+      "Dziamdziak"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "H",
+    "players": [
+      "Somero",
+      "Lighty",
+      "Argh",
+      "GodOfTheGodless",
+      "Thành Cổ Quảng Trị",
+      "darvoi",
+      "Blackheart",
+      "Ted"
+    ]
+  },
+  {
+    "season": "1",
+    "league": "silver",
+    "group": "I",
+    "players": [
+      "Overtaken",
+      "Eli",
+      "ElNoniro",
+      "Annotoph",
+      "HOANG",
+      "MrPlanner",
+      "chanchilaru",
+      "Nahuel05_"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "A",
+    "players": [
+      "F1Re",
+      "Mununez",
+      "Blackheart",
+      "ValihrAnt",
+      "gkt_cloud",
+      "TomS",
+      "Somero",
+      "PLP"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "B",
+    "players": [
+      "saymyname",
+      "kw",
+      "Tyrant",
+      "Survivalist",
+      "Dr.Kozmonot",
+      "ronotovi",
+      "Target331",
+      "Sora Kuma"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "C",
+    "players": [
+      "Uzzi",
+      "Zuccolo",
+      "Nahuel05",
+      "Hellsum",
+      "Nili",
+      "Kamigawa",
+      "T90Official",
+      "CHELOOO"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "D",
+    "players": [
+      "El_Matador",
+      "Mettiu",
+      "IAnTaGoNiStI",
+      "Argh",
+      "IBUYPOWER",
+      "dave_hun",
+      "GriN",
+      "steak"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "E",
+    "players": [
+      "Overtaken",
+      "Eren",
+      "Alive",
+      "Paganini",
+      "Whitecourt",
+      "hoi",
+      "Andre_2i",
+      "Salted Pepper"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "F",
+    "players": [
+      "Kasva",
+      "uno1",
+      "BL4CK",
+      "Monoz",
+      "Ozone",
+      "Terz",
+      "Biry",
+      "Solara"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "G",
+    "players": [
+      "DreamCl",
+      "darvoi",
+      "Tomate",
+      "The_Bloodless",
+      "Western",
+      "R4v3N",
+      "Yax",
+      "Carbo"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "H",
+    "players": [
+      "Bad Koala",
+      "Matze",
+      "Cyclops",
+      "Lighty",
+      "Jibatong",
+      "Nezzar",
+      "TieuQuy",
+      "JonSlow"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "I",
+    "players": [
+      "St4rk",
+      "Noszombie",
+      "StonePleaseAoE",
+      "Parawhas",
+      "deaKer",
+      "Acro17",
+      "Cl3m3nT",
+      "DOOMSTER"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "J",
+    "players": [
+      "Fedex",
+      "Loris",
+      "chaos_2_win",
+      "Dziamdziak",
+      "Thành Cổ Quảng Trị",
+      "MrOsoVC8",
+      "ciskhan",
+      "King_Boo"
+    ]
+  },
+  {
+    "season": "2",
+    "league": "silver",
+    "group": "K",
+    "players": [
+      "Ming",
+      "Eli",
+      "Pela",
+      "VarVarus",
+      "z40",
+      "iDabs",
+      "Prisma09",
+      "emalius2"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "A",
+    "players": [
+      "Lewis",
+      "R4v3N",
+      "Terz",
+      "Survivalist",
+      "AntagonisT",
+      "Dog9you",
+      "Twigg",
+      "Socksyy"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "B",
+    "players": [
+      "Lucho",
+      "Godsprisoner",
+      "Tomate",
+      "BL4CK",
+      "iBUYPOWER",
+      "Wade77",
+      "Whitecourt",
+      "The Illusionist"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "C",
+    "players": [
+      "Jibatong",
+      "steak",
+      "Biry",
+      "Lamo",
+      "repard",
+      "dave_hun",
+      "St4rk",
+      "hoi"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "D",
+    "players": [
+      "Prisma09",
+      "Torpedo",
+      "Andre_2i",
+      "Alive",
+      "El_Matador",
+      "Dziamdziak",
+      "chart",
+      "AboKeiTo"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "E",
+    "players": [
+      "z40",
+      "Acerx",
+      "TeMo",
+      "BadBoy",
+      "Bad Koala",
+      "Matze",
+      "Whocl",
+      "ElNoniro"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "F",
+    "players": [
+      "Overtaken",
+      "IXAM",
+      "Rayz",
+      "Nezzar",
+      "Youpudding",
+      "Argh",
+      "DOOMSTER",
+      "JonSlow"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "G",
+    "players": [
+      "Dr.Kozmonot",
+      "MrOsoVC8",
+      "DuDuZhu",
+      "Lord Envidiates",
+      "Uzzi",
+      "Rodrixs",
+      "StonePleaseAoE",
+      "Nacho_10"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "H",
+    "players": [
+      "saymyname",
+      "Chopi",
+      "m0re",
+      "Ubetnir",
+      "Monoz",
+      "Paganini",
+      "Ozone",
+      "Szikyyyy"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "I",
+    "players": [
+      "Ciskhan",
+      "Dobbs351",
+      "GoKu",
+      "Nahue05",
+      "F1Re",
+      "Eli",
+      "Dennis",
+      "Solana"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "J",
+    "players": [
+      "Thành Cổ Quảng Trị",
+      "Koala26",
+      "GUKI",
+      "Pela",
+      "deaKer",
+      "Wean Dinchester",
+      "ThunderboltX",
+      "Redphosphoru"
+    ]
+  },
+  {
+    "season": "4",
+    "league": "silver",
+    "group": "K",
+    "players": [
+      "wide",
+      "Kimbo",
+      "Gabi",
+      "mentalist_",
+      "Sora Kuma",
+      "RivuxTV",
+      "Cloud",
+      "AnTiDeMoN"
     ]
   }
 ]

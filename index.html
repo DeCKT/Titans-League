@@ -5,21 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./styles/tw-main.css" rel="stylesheet" />
     <title>T90 Titans League</title>
-
-    <style>
-      #tsparticles canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -2153326;
-      }
-    </style>
   </head>
-  <body class="bg-gray-950 text-sky-50">
-    <nav class="sticky top-0 w-full z-50">
-  <menu class="relative flex bg-gray-900 z-10 text-white">
+  <body class="bg-gray-950 text-sky-50 tracking-wider">
+    <nav class="sticky top-0 w-full text-xl z-10 text-center">
+      <div class="relative w-full flex bg-gray-900">
+  <ul class="relative flex bg-gray-900 z-10 text-white">
     <li class="bg-gray-900 z-40">
       <a
         href="/"
@@ -30,17 +20,17 @@
     <li class="z-10 bg-gray-900" id="seasonSelector">
       <button
         id="seasonSelectorButton"
-        class="px-4 py-3 flex gap-1 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
+        class="px-4 py-3 flex gap-2 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50"
       >
         Seasons
-        <span class="self-center"
+        <span class="self-center mt-1"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="3"
             stroke="currentColor"
-            class="size-3 duration-200"
+            class="size-4 duration-200"
             id="dropdownSvg"
           >
             <path
@@ -66,215 +56,160 @@
         >Maps</a
       >
     </li>
-    
-  </menu>
+  </ul>
+
+  <div class="flex ml-auto">
+    <div class="bg-gray-900 z-10">
+      <span class="block px-4 py-3 duration-100 bg-gray-900">Season 5 Coming Soon!</span>
+    </div>
+    <div class="bg-gray-900 z-10 self-center mx-4">
+      <a href="https://www.youtube.com/watch?v=cgIQ7zitif4" target="_blank" rel="noreferrer" class=" text-sm block px-3 py-1.5 rounded-2xl bg-amber-900 hover:bg-amber-700 duration-100">Watch Announcement</a>
+    </div>
+     <!-- <div class="bg-gray-900 z-10">
+      <button class="px-4 py-3 flex gap-2 bg-gray-900 hover:cursor-pointer hover:bg-slate-800 z-50 mr-4" id="settingsSelectorButton">Settings
+        <span class="self-center mt-1"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor"
+            class="size-4 duration-200"
+            id="dropdownSvg2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </span>
+      </button> -->
+    </div>
+  </div>
+</div>
   
-  <!-- Season Dropdown Menu -->
-  <menu
+  <!-- dropdown menus -->
+  <ul
     class="absolute left-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 flex w-full"
     id="dropdownMenu"
-  >
-  </menu>
+  ></ul>
+<!-- <div class="absolute right-0 top-full bg-gray-900 -translate-y-full duration-200 -z-10 h-screen w-64 flex flex-col" id="settingsDropdown"></div> -->
 </nav>
-    <main>
-      <div id="tsparticles" class="relative lg:py-16">
-        <section class="max-w-7xl p-4 m-auto flex flex-col lg:grid grid-cols-2">
-        
-          <iframe id="ytplayer" type="text/html" class="aspect-video w-full"
-            src="https://www.youtube.com/embed/_lvZAUVUkYE?loop=1"
-            frameborder="0" allowfullscreen ></iframe>
-          <div class="text-2xl lg:text-xl xl:text-2xl flex flex-col justify-between pt-6 lg:p-6 font-light">
-            <p ><span class="bg-slate-950/75">TTL4 was amazing thanks to the incredible community support with well over a million views! I'm so grateful for my co-casters, content creators, and exceptional team who made it all possible. Seeing the players' excitement and new strategies was fantastic, and I'm already looking forward to making next season even better.</span></p>
-            <p class="mt-2 flex justify-end"><span class="bg-slate-950/75 mr-8">-- T90Official</span></p>
-          </div>
-          
-        </section>
-      </div>
-      
-      <section class="text-lg relative">
-        <div class="sticky top-12 bg-gray-950 z-20">
-          <h1 class="uppercase font-medium text-2xl max-w-7xl p-4 m-auto">What is Titans League?</h1>
-        </div>
-        
-        <div class="flex flex-col lg:grid grid-cols-2 max-w-7xl p-4 m-auto">
-          <div class="flex justify-center align-middle bg-[url(/assets/404image.png)] bg-center bg-no-repeat bg-cover relative">
-            <div class="absolute top-0 left-0 size-full bg-gray-950/40"></div>
-            <img class="max-w-80 p-10 z-10 drop-shadow-[8px_11px_1px_#030712]" src="/assets/s1-logo.png" />
-          </div>
-          <div class="flex justify-center content-center flex-wrap">
-            <p class="text-center max-w-lg h-fit text-2xl font-light">T90 Titans League (TTL) is a reoccurring Age of Empires 2 tournament, divided into 3 leagues:<br />Platinum, Gold, and Silver.</p>
-          </div>
-        </div>
-        
-        <div class="flex flex-col gap-8 max-w-7xl p-4 m-auto">
-          <div class="flex justify-center content-center flex-wrap">
-            <p class="text-center h-fit text-2xl font-light max-w-3xl">In Platinum, players are placed into 4 groups of 6. Each player will play a round of 3 games against the other players in their group. 5th and 6th seeds are relegated to Gold league for the following season. The 4th seed in each group does not advance, but is guaranteed a spot in Platinum the following season. The top 3 players advance to the playoffs bracket.</p>
-          </div>
+    <main class="text-lg flex flex-col gap-12 py-12">
 
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 text-center font-light">
-            <div class="bg-gray-900 p-2">
-              <div class="pb-2">Group A</div>
-              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">classicpro</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">DauT</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">JorDan_AoE</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">miguel</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">saymyname</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">TheViper</li>
-              </ul>
-            </div>
+      <!-- hero section -->
 
-            <div class="bg-gray-900 p-2">
-              <div class="pb-2">Group B</div>
-              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Barles</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">bruh</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Hera</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">The_Dragonstar</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Villese</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Yo</li>
-              </ul>
-            </div>
-
-            <div class="bg-gray-900 p-2">
-              <div class="pb-2">Group C</div>
-              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">BacT</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Capoch</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Liereyy</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">slam</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">SongSong</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Vinchester</li>
-              </ul>
-            </div>
-
-            <div class="bg-gray-900 p-2">
-              <div class="pb-2">Group D</div>
-              <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2 gap-2">
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">ACCM</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">BadBoy</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">dogao</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">MbL</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">Nicov</li>
-                <li class="border border-sky-50 p-1 overflow-hidden text-ellipsis">TaToH</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col lg:grid lg:grid-cols-2 max-w-7xl p-4 m-auto">
-          <div class="flex justify-center content-center flex-wrap">
-            <p class="text-center max-w-lg h-fit text-2xl font-light">The top 3 players in each group are seeded into a round-of-12, "best-of" bracket. Players progress through the bracket until a winner is decided.</p>
-          </div>
-          <div class="bg-gray-900 font-light p-2 lg:ml-2">
-            <div class="text-center pb-2">Playoffs</div>
-            <div class="grid grid-cols-4 gap-8">
-              <div class="flex flex-col gap-4 justify-around">
-                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Liereyy</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Yo</div>
-                </div>
-                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Villese</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Capoch</div>
-                </div>
-                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">JorDan_AoE</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">TaToH</div>
-                </div>
-                <div class="border border-sky-50 relative after:absolute after:w-8 after:-right-8 after:h-px after:border-t after:border-sky-50 after:top-1/2 after:-translate-y-px">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Nicov</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">DauT</div>
-                </div>
-              </div>
-            
-              <div class="flex flex-col gap-4 justify-around">
-                <div class="border border-sky-50 relative after:absolute after:w-4 after:-right-4 after:h-[92px] after:border-y after:border-r after:border-sky-50 after:top-1/2 after:-translate-y-px">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">TheViper</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Yo</div>
-                </div>
-                <div class="border border-sky-50 relative  ">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">MbL</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Villese</div>
-                </div>
-                <div class="border border-sky-50 relative after:absolute after:w-4 after:-right-4 after:h-[92px] after:border-y after:border-r after:border-sky-50 after:top-1/2 after:-translate-y-px">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Hera</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">JorDan_AoE</div>
-                </div>
-                <div class="border border-sky-50 relative  ">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Vinchester</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Nicov</div>
-                </div>
-              </div>
-            
-              <div class="flex flex-col gap-4 justify-around">
-                <div class="border border-sky-50 relative after:absolute after:w-4 after:-right-4 after:h-[183px] after:border-y after:border-r after:border-sky-50 after:top-1/2 before:absolute before:w-[18px] before:-left-[18px] before:h-px before:border-b before:border-sky-50 before:top-1/2">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">TheViper</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Villese</div>
-                </div>
-                <div class="border border-sky-50 relative before:absolute before:w-[18px] before:-left-[18px] before:h-px before:border-b before:border-sky-50 before:top-1/2">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Hera</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Vinchester</div>
-                </div>
-              </div>
-            
-              <div class="flex flex-col gap-4 justify-around">
-                <div class="border border-sky-50 relative before:absolute before:w-[18px] before:-left-[18px] before:h-px before:border-b before:border-sky-50 before:top-1/2 ">
-                  <div class="px-2 py-1 border-b border-sky-50 overflow-hidden text-ellipsis">Villese</div>
-                  <div class="px-2 py-1 overflow-hidden text-ellipsis">Vinchester</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="flex flex-col gap-8 max-w-7xl p-4 m-auto">
-          <div class="flex justify-center content-center flex-wrap">
-            <p class="text-center h-fit text-2xl font-light max-w-3xl">Gold league follows a similar format, with 4 groups of 6. Each group's top players qualify for a decider match to determine who will advance to Platinum. The bottom 2 from each group are relegated to Silver league.</p>
+      <section class="w-full max-w-[1450px] m-auto px-4">
+        <div class="grid grid-cols-2 gap-6 items-center">
+          <div class="p-6 pl-0 flex flex-col gap-4 items-start">
+            <h1 class="text-4xl font-bold"><span>What is</span><br /><span class="text-6xl">Titans League</span></h1>
+            <p class="mt-4">T90 Titans League (TTL) is a high-stakes, single-elimination Age of Empires II tournament where every match matters. Players battle through skill-based leagues, fighting for promotion, avoiding relegation, and earning cash for every win.</p>
+            <a class="bg-amber-900 py-2 px-3 rounded-2xl text-sm mt-6 hover:bg-amber-700 duration-100 dynamic-button"
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.youtube.com/watch?v=ch2SzijcnCo&list=PLGVjiUKVQd72aTIO8mIZet2qf5qRDQnfq"
+              data-twitch-channel="t90official"
+              data-twitch-url="https://www.twitch.tv/t90official"
+              data-youtube-url="https://www.youtube.com/watch?v=ch2SzijcnCo&list=PLGVjiUKVQd72aTIO8mIZet2qf5qRDQnfq"
+              data-keywords="regicide"
+              data-live-text="Watch Live!"
+              data-default-text="Watch Now!">
+              Watch Now!
+            </a>
           </div>
           <div>
-
+            <img src="/assets/404image.png" />
           </div>
-          </div>
-        
-        <p>Silver league also sees players placed in groups, however, players instead compete in a single-elimination "best-of" bracket. The winner of each group qualifies for the Gold leage in the following season.</p>
+        </div>
       </section>
+
+      <!-- leagues section -->
+
+      <section class="w-full max-w-[1450px] m-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4">Leagues</h1>
+        <ul class="grid grid-cols-4 gap-6">
+          <li class="flex flex-col gap-2 items-center bg-gray-900 px-2 py-6">
+            <h3 class="text-2xl font-bold text-center">Platinum</h3>
+            <p class="text-center">The best of the best</p>
+            <a href="#" class="bg-amber-900 py-2 px-3 rounded-2xl text-sm mt-auto hover:bg-amber-700 duration-100">Season 5 Lineup</a>
+          </li>
+          <li class="flex flex-col gap-2 items-center bg-gray-900 px-2 py-6">
+            <h3 class="text-2xl font-bold text-center">Gold</h3>
+            <p class="text-center">Driven to prove themselves</p>
+            <a href="#" class="bg-amber-900 py-2 px-3 rounded-2xl text-sm mt-auto hover:bg-amber-700 duration-100">Season 5 Lineup</a>
+          </li>
+          <li class="flex flex-col gap-2 items-center bg-gray-900 px-2 py-6">
+            <h3 class="text-2xl font-bold text-center">Silver</h3>
+            <p class="text-center">Up and coming talent</p>
+            <a href="#" class="bg-amber-900 py-2 px-3 rounded-2xl text-sm mt-auto hover:bg-amber-700 duration-100">Season 5 Lineup</a>
+          </li>
+          <li class="flex flex-col gap-2 items-center bg-gray-900 px-2 py-6 relative">
+            <div class="absolute top-0 left-0 -translate-x-1/5 -translate-y-1/3 text-xs bg-red-800 flex flex-col justify-center px-1 py-0.5 rounded-md">New!</div>
+            <h3 class="text-2xl font-bold text-center">Bronze</h3>
+            <p class="text-center">New faces</p>
+            <a href="#" class="bg-amber-900 py-2 px-3 rounded-2xl text-sm mt-auto hover:bg-amber-700 duration-100">Season 5 Lineup</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- signups section -->
+
+      <section class="w-full max-w-[1450px] m-auto px-4">
+        <div class="grid grid-cols-2 gap-6 items-center">
+          <div class="p-6 pl-0 flex flex-col gap-4 items-start">
+            <h2 class="text-4xl font-bold">Signups</h1>
+            <p class="mt-4">Ready to prove you have what it takes to take down the best? Think you can take on the AoE 2 Gauntlet? Sign up for Season 5 Bronze League and show the world what you’ve got!</p>
+            <a class="bg-gray-500 py-2 px-3 rounded-2xl text-sm mt-6 duration-100 pointer-events-none" href="#">Coming Soon!</a>
+          </div>
+          <div>
+            <img src="/assets/404image.png" />
+          </div>
+        </div>
+      </section>
+
+      <!-- don't miss out section -->
+
+      <section class="w-full">
+        <div class="bg-gray-900 flex flex-col gap-4 px-4 py-18">
+          <h2 class="text-center text-4xl font-bold">Don't Miss Out!</h2>
+          <p class="text-center">Stay up to date with Titans League 5</p>
+          <div class="flex gap-10 justify-center">
+            <a href="https://www.twitch.tv/t90official" target="_blank" rel="noreferrer" class="bg-amber-900 hover:bg-amber-700 duration-100 rounded-2xl text-sm py-2 px-3 flex items-center gap-2"><img src="/assets/twitch-logo-purple.svg" class="w-4" />Follow</a>
+            <a href="https://www.youtube.com/@T90Official/search?query=Titans%20League&sub_confirmation=1" target="_blank" rel="noreferrer" class="bg-amber-900 hover:bg-amber-700 duration-100 rounded-2xl text-sm py-2 px-3 flex items-center gap-2"><img src="/assets/youtube_social_icon_white.png" class="h-4" />Subscribe</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- donate section -->
+
+      <section class="w-full max-w-[1450px] m-auto px-4">
+        <div class="grid grid-cols-2 gap-6 items-center">
+          <div>
+            <img src="/assets/404image.png" />
+          </div>
+          <div class="p-6 pl-0 flex flex-col gap-4 items-start">
+            <h2 class="text-4xl font-bold">Donate</h1>
+            <p class="mt-4">Help us raise the stakes and support the amazing players who make Titans League possible. Donate now to grow the prize pool, and help us make this the most competitive season yet!</p>
+            <a class="bg-gray-500 py-2 px-3 rounded-2xl text-sm mt-6 duration-100 pointer-events-none" href="#">Coming Soon!</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- discord section -->
+
+      <section class="w-full max-w-[1450px] m-auto px-4">
+        <div class="w-full aspect-[16/6] bg-[image:url(/assets/discord-screenshot.jpg)] bg-center bg-no-repeat bg-cover">
+          <div class="w-full h-full relative bg-linear-to-r from-transparent to-60% to-black/85">
+            <a href="https://discord.gg/t90official" class="absolute flex gap-2 text-sm items-center py-2 px-3 rounded-2xl bg-amber-900 hover:bg-amber-700 right-60 bottom-20" rel="noreferrer" target="_blank"><img src="/assets/Discord-Symbol-Blurple.svg" class="h-4" />Join the Discord</a>
+          </div>
+          
+        </div>
+      </section>
+
     </main>
     <script src="/scripts/navbar.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
-  <script type="text/javascript">
-    // All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
-    // The slim version doesn't have the following plugins:
-    // Absorbers, Emitters, PolygonMask, Interactivity Trail
-    const options = {
-      background: {
-        color: "#020618"
-      },
-      fullScreen: {
-        enable: false
-      },
-      particles: {
-        move: {
-          enable: true, // this makes particles move
-          speed: { min: .5, max: 2 }, // this is the speed of the particles
-        },
-        opacity: {
-          value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
-        },
-        size: {
-          value: { min: 1, max: 3 }, // this sets the size of the particles
-        },
-        number: {
-          value: 50
-        },
-        pauseOnBlur: true,
-        pauseOnOutsideViewport: true
-      },
-    };
-
-    // tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
-    tsParticles.load("tsparticles", options);
-  </script>
+    <script src="/scripts/watch-button.js" type="module"></script>
 
   </body>
 </html>

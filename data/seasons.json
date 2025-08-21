@@ -1,40 +1,52 @@
 [
   {
     "name": "Season 1",
-    "leagues": ["platinum", "gold", "silver"],
-    "maps": [
-      "Arabia",
-      "Arena",
-      "Atacama",
-      "Cross",
-      "Fortified Clearing",
-      "Gold Rush",
-      "Golden Swamp",
-      "Houseboat",
-      "Jungle Swamp",
-      "Ravines",
-      "Serengeti"
+    "leagues": [
+      "platinum",
+      "gold",
+      "silver"
     ],
     "logo": "s1-logo.png",
-    "playlist": "PLGVjiUKVQd72aTIO8mIZet2qf5qRDQnfq",
-    "thumbnail": "ch2SzijcnCo"
+    "playlist": "https://www.youtube.com/playlist?list=PLGVjiUKVQd72aTIO8mIZet2qf5qRDQnfq"
   },
   {
     "name": "Season 2",
-    "leagues": ["platinum", "gold", "silver"],
-    "maps": ["Acropolis", "Arabia", "Arena", "Cross", "Fortified Clearing", "Fortress",	"Ghost Lake", "Kilimanjaro", "Nomad", "Scandinavia", "Shoals"],
-    "logo": "s2-logo.png"
+    "leagues": [
+      "platinum",
+      "gold",
+      "silver"
+    ],
+    "logo": "s2-logo.png",
+    "playlist": "https://www.youtube.com/playlist?list=PLGSU-esgAAEW3S_jyTrdfaWbYxDiBQjlJ"
   },
   {
     "name": "Season 3",
-    "leagues": ["platinum", "gold", "silver"],
-    "maps": ["Coast to Mountain",	"El Dorado", "Fractal", "Golden Pit", "Graveyards", "Hideout", "Land Madness", "Migration", "Socotra", "Spiral", "ZeWall"],
-    "logo": "s3-logo.png"
+    "leagues": [
+      "platinum", "gold"
+      
+    ],
+    "logo": "s3-logo.png",
+    "playlist": "https://www.youtube.com/playlist?list=PLGSU-esgAAEXH36RRVw_tVYygXA5ZhVzX"
   },
   {
     "name": "Season 4",
-    "leagues": ["platinum", "gold"],
-    "maps": ["Acropolis", "Cross", "Dzong", "Evacuation", "Fortified Clearing", "Jungle Swamp", "Kilimanjaro", "Pacific Islands", "Ravines", "Rocky Forest" ,"Shoals"],
-    "logo": "s4-logo.png"
+    "leagues": [
+      "platinum",
+      "gold",
+      "silver"
+    ],
+    "logo": "s4-logo.png",
+    "playlist": "https://www.youtube.com/playlist?list=PLGSU-esgAAEWOv_qu6b-hdjdTxPu_1D7X"
+  },
+  {
+    "name": "Season 5",
+    "leagues": [
+      "platinum",
+      "gold",
+      "silver",
+      "bronze"
+    ],
+    "logo": "s5-logo.png",
+    "playlist": "https://www.youtube.com/playlist?list=PLGSU-esgAAEWENW1JxOzkvlqRJ7Zoguzv"
   }
 ]
