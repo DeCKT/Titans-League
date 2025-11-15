@@ -335,46 +335,46 @@ function updateParentToggleState(parentId) {
 }
 
 // Event listeners for settings dropdown
-settingsButton.addEventListener('mouseover', () => {
-  if (!settingsMenuOpen) {
-    openSettingsMenu()
-  }
-})
+// settingsButton.addEventListener('mouseover', () => {
+//   if (!settingsMenuOpen) {
+//     openSettingsMenu()
+//   }
+// })
 
-settingsButton.addEventListener('mouseout', () => {
-  if (!settingsMenuOpen) {
-    closeSettingsMenu()
-  }
-})
+// settingsButton.addEventListener('mouseout', () => {
+//   if (!settingsMenuOpen) {
+//     closeSettingsMenu()
+//   }
+// })
 
-settingsDropdown.addEventListener('mouseover', () => {
-  if (!settingsMenuOpen) {
-    openSettingsMenu()
-  }
-})
+// settingsDropdown.addEventListener('mouseover', () => {
+//   if (!settingsMenuOpen) {
+//     openSettingsMenu()
+//   }
+// })
 
-settingsDropdown.addEventListener('mouseout', () => {
-  if (!settingsMenuOpen) {
-    closeSettingsMenu()
-  }
-})
+// settingsDropdown.addEventListener('mouseout', () => {
+//   if (!settingsMenuOpen) {
+//     closeSettingsMenu()
+//   }
+// })
 
-settingsButton.addEventListener('click', () => {
-  if (settingsMenuOpen) {
-    closeSettingsMenu()
-    settingsMenuOpen = false
-  } else {
-    openSettingsMenu()
-    settingsMenuOpen = true
-  }
-})
+// settingsButton.addEventListener('click', () => {
+//   if (settingsMenuOpen) {
+//     closeSettingsMenu()
+//     settingsMenuOpen = false
+//   } else {
+//     openSettingsMenu()
+//     settingsMenuOpen = true
+//   }
+// })
 
-document.addEventListener('click', (e) => {
-  if (settingsMenuOpen && !settingsButton.contains(e.target) && !settingsDropdown.contains(e.target)) {
-    closeSettingsMenu()
-    settingsMenuOpen = false
-  }
-})
+// document.addEventListener('click', (e) => {
+//   if (settingsMenuOpen && !settingsButton.contains(e.target) && !settingsDropdown.contains(e.target)) {
+//     closeSettingsMenu()
+//     settingsMenuOpen = false
+//   }
+// })
 
 // Initialize settings dropdown
-buildSettingsMenu()
+// buildSettingsMenu()

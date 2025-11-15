@@ -252,62 +252,7 @@ bracketWrapper.classList = 'relative';
 // Add custom CSS for bracket lines
 const style = document.createElement('style');
 style.textContent = `
-  .bracket-match {
-    position: relative;
-    margin: 16px 0;
-  }
   
-  /* Horizontal line from match to next round */
-  .bracket-match::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    width: 30px;
-    height: 2px;
-    background-color: rgb(75, 85, 99);
-  }
-  
-  /* Don't show line after finals */
-  .bracket-round:last-child .bracket-match::after {
-    display: none;
-  }
-  
-  /* Special handling for Round of 12 - just horizontal lines */
-  .round-of-12 .bracket-match::after {
-    width: 30px;
-  }
-  
-  /* Bracket connectors for matches that merge */
-  .bracket-connector-pair {
-    position: relative;
-  }
-  
-  .bracket-connector-pair::before {
-    content: '';
-    position: absolute;
-    top: 25%;
-    left: -30px;
-    width: 2px;
-    height: 50%;
-    background-color: rgb(75, 85, 99);
-  }
-  
-  .bracket-connector-pair::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -30px;
-    width: 30px;
-    height: 2px;
-    background-color: rgb(75, 85, 99);
-  }
-  
-  /* Special vertical line for semifinals to finals */
-  .semifinals-connector::before {
-    height: calc(100% + 32px);
-    top: -16px;
-  }
   
   .bracket-round {
     display: flex;
@@ -381,6 +326,26 @@ const createMatchElement = (matchup) => {
   return matchDiv;
 };
 
+const createByeElement = (player) => {
+  const byeDiv = document.createElement('div');
+  byeDiv.classList = 'bg-gray-800 rounded p-2 space-y-1 min-w-[160px] flex justify-between items-center';
+
+  const playerDiv = document.createElement('span');
+  const result = document.createElement('span');
+
+  playerDiv.classList = 'px-2 py-1 rounded text-sm font-semibold'
+  playerDiv.textContent = player;
+
+  result.classList = 'text-xs font-mono px-2'
+  result.textContent = "Bye"
+
+  byeDiv.appendChild(playerDiv)
+  byeDiv.appendChild(result)
+
+
+  return byeDiv
+}
+
 // Create round columns
 const rounds = ['Round of 12', 'Quarterfinals', 'Semifinals', 'Finals'];
 rounds.forEach((roundName, roundIndex) => {
@@ -397,7 +362,7 @@ rounds.forEach((roundName, roundIndex) => {
   roundDiv.appendChild(roundHeader);
   
   const matchupsContainer = document.createElement('div');
-  matchupsContainer.classList = 'flex flex-col justify-center h-full';
+  matchupsContainer.classList = 'flex flex-col justify-around  h-full';
   
   const matchups = getMatchups(gamesByRound[roundName]);
   
@@ -411,7 +376,10 @@ rounds.forEach((roundName, roundIndex) => {
     spacingClass = 'gap-8'; // Normal spacing
   }
   
-  matchupsContainer.classList.add(spacingClass);
+  if (spacingClass !== '') {
+    matchupsContainer.classList.add(spacingClass);
+  }
+  
   
   if (matchups.length === 0) {
     // Create placeholder matches based on expected number
@@ -432,24 +400,26 @@ rounds.forEach((roundName, roundIndex) => {
       matchupsContainer.appendChild(matchWrapper);
     }
   } else {
+    
     matchups.forEach((matchup, matchIndex) => {
       const matchWrapper = document.createElement('div');
       matchWrapper.classList = 'bracket-match';
-      
-      // Add connector styling for rounds that merge
-      if (roundName === 'Quarterfinals' && (matchIndex === 0 || matchIndex === 2)) {
-        matchWrapper.classList.add('bracket-connector-pair');
-      } else if (roundName === 'Semifinals') {
-        matchWrapper.classList.add('bracket-connector-pair');
-        if (matchIndex === 0) {
-          matchWrapper.classList.add('semifinals-connector');
-        }
-      } else if (roundName === 'Finals') {
-        matchWrapper.classList.add('bracket-connector-pair');
-      }
+
+      // TODO: add an empty wrapper, if bye exists, append it to wrapper using bye helper function. Append bye to matchupsContainer
+      const byeWrapper = document.createElement('div');
       
       matchWrapper.appendChild(createMatchElement(matchup));
       matchupsContainer.appendChild(matchWrapper);
+
+      if (roundName === "Round of 12") {
+        const selectedGroup = seasonGroups.filter((season) => season.league === league)
+
+        const adjustedIndex = [0, 3, 1, 2]
+
+        const byePlayer = selectedGroup[adjustedIndex[matchIndex]].players[0]
+        byeWrapper.appendChild(createByeElement(byePlayer))
+        matchupsContainer.appendChild(byeWrapper)
+      }
     });
   }
   
